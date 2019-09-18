@@ -1,0 +1,164 @@
+.hero img {
+	background: url(https://ride.conquercancer.ca/toronto20/wp-content/uploads/2019/09/20017_rcca_recnight_assets_slider_v2.jpg) no-repeat;
+	width: 100%;
+	height: auto;
+	min-height: 541px;
+}
+
+.container {
+	padding: 40px 0;
+}
+
+.container div {
+	display: inline-block;
+}
+
+.body .row:nth-of-type(3) {
+    background: #003960;
+    min-height: 305px;
+}
+
+.body .row:nth-of-type(3) .container img {
+
+}
+
+.container.half div {
+	position: absolute;
+	min-height: 235px
+}
+
+.container.half div:nth-child(2) {
+	right: 0;
+	color: #fff;
+	margin-top: -5px;
+	padding-left: 35px;
+}
+
+.container.half div:nth-child(2) a {
+	border: 2px solid #fff;
+    padding: 10px 0;
+    width: 100%;
+    display: block;
+    text-transform: uppercase;
+    color: #fff;
+    max-width: 218px;
+    text-align: center;
+    transition: 0.4s;
+    text-decoration: none;
+    background: #003960;
+    transition: 0.4s;
+    position: relative;
+    bottom: -40px;
+}
+
+.container.half div:nth-child(2) a:hover {
+	color: #003960;
+	background: #fff;
+}
+
+.body .row:nth-child(3) .row:nth-child(2) .container div:nth-child(1) {
+	background: #222;
+}
+
+.body .row:nth-child(3) .row:nth-child(2) .container div:nth-child(2) {
+	background: #333;
+}
+
+.body .row:nth-of-type(4) {
+	padding: 40px 0;
+}
+
+.body .row:nth-of-type(4) .row {
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+
+.body .row:nth-of-type(2) .container div h6 {
+	letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: bolder;
+    color: #2b8bc3 !important;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.body .row:nth-of-type(2) .container div p {
+	font-size: 13px;
+	text-align: center;
+}
+
+.body .row:nth-of-type(2) .container div a:hover {
+	background: #2b8bc3;
+	color: #fff;
+}
+
+.body .row:nth-of-type(2) .container.story div a {
+	border: 2px solid #2b8bc3;
+    padding: 10px 0;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    text-transform: uppercase;
+    color: #2b8bc3;
+    max-width: 218px;
+    text-align: center;
+    transition: 0.4s;
+    text-decoration: none;
+}
+
+.body .row:nth-of-type(2) .container.leader div {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.body .row:nth-of-type(2) .container.leader div a {
+	/*position: relative;*/
+	/*top: 10px;*/
+	padding: 10px 0;
+	display: block;
+	/*width: 100%;*/
+	background: #000;
+	color: #fff;
+}
+
+.body .row:nth-of-type(2) .container.leader div:nth-child(1) a {
+	background: #fff;
+	color: #000;
+}
+
+.body .row:nth-of-type(2) .container.leader div a:hover {
+
+}
+
+
+.body .row:nth-of-type(4) .row:nth-child(2) .container div:nth-child(1),
+.body .row:nth-of-type(4) .row:nth-child(2) .container div:nth-child(2),
+.body .row:nth-of-type(4) .row:nth-child(2) .container div:nth-child(3),
+.body .row:nth-of-type(4) .row:nth-child(2) .container div:nth-child(4) {
+	/*border: 2px solid #000;*/
+	/*min-height: 50px;*/
+}
+
+.body .row:nth-of-type(4) .row:nth-child(2) .container div:nth-child(1) {
+	border-left: 2px solid #000;
+	border-top: 2px solid #000;
+	border-bottom: 2px solid #000;
+}
+
+.body .row:nth-of-type(4) .row:nth-child(2) .container div:nth-child(2) {
+	border: 2px solid #000;
+}
+
+.body .row:nth-of-type(4) .row:nth-child(2) .container div:nth-child(3) {
+	border-top: 2px solid #000;
+	border-bottom: 2px solid #000;
+}
+
+.body .row:nth-of-type(4) .row:nth-child(2) .container div:nth-child(4) {
+	border: 2px solid #000;
+}
+
+/*.container div:nth-child(2) div:nth-child(1) {
+	left: 0;
+}*/

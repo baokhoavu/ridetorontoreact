@@ -6,3 +6,64 @@ body {
   text-align: center;
   margin: auto;
 }
+
+.hero img {
+	background: url(https://ride.conquercancer.ca/toronto20/wp-content/uploads/2019/09/20017_rcca_recnight_assets_slider_v2.jpg) no-repeat;
+	width: 100%;
+	height: auto;
+	min-height: 541px;
+}
+
+.container {
+	padding: 40px 0;
+}
+
+.container div {
+	display: inline-block;
+}
+
+.body .row:nth-of-type(3) {
+    background: #003960;
+    min-height: 305px;
+}
+
+.body .row:nth-of-type(3) .container img {
+
+}
+
+.container.half div {
+	position: absolute;
+}
+
+.container.half div:nth-child(1) {
+	left: 0;
+}
+
+.body .row:nth-child(3) .row:nth-child(2) .container div:nth-child(1) {
+	background: #222;
+}
+
+.body .row:nth-child(3) .row:nth-child(2) .container div:nth-child(2) {
+	background: #333;
+}
+
+.body .row:nth-of-type(4) {
+	padding: 40px 0;
+}
+
+.body .row:nth-of-type(4) .row {
+	display: block;
+	width: 100%;
+}
+
+.body .row:nth-of-type(4) .row:nth-child(2) .container div:nth-child(1) {
+	background: red;
+}
+
+.body .row:nth-of-type(4) .row:nth-child(2) .container div:nth-child(2) {
+	background: blue;
+}
+
+/*.container div:nth-child(2) div:nth-child(1) {
+	left: 0;
+}*/
