@@ -9,16 +9,17 @@ const Header = () => (
 			<nav>
 				<ul>
 					<li>
-						<Link to="/">Home</Link>
+						<Link to="/q1e2/">Home</Link>
 					</li>
 					<li>
-						<Link to="/about">About</Link>
+						<Link to="/q1e2/about">About</Link>
 					</li>
 				</ul>
 			</nav>
-			<Route exact path="/" component={Home} />
+			<Route exact path="/q1e2/" component={Home} />
+			{/*<Route exact path="/" component={Home} />*/}
 			
-			<Route path="/about" component={About} />
+			<Route path="/q1e2/about" component={About} />
 		</Router>
 	</div>
 
