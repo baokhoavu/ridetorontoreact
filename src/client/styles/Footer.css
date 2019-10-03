@@ -6,6 +6,15 @@
     /*margin: 0 auto;*/
 }
 
+.footer .container-fluid {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
 .container-fluid {
 	display: block;
     padding: 40px 0;
@@ -17,9 +26,9 @@
 	display: inline-block;
 }
 
-.footer .container-fluid > .col-md-2 {
+/*.footer .container-fluid > .col-md-2 {
 	position: absolute;
-}
+}*/
 
 .footer .container-fluid > div.first {
 	padding-left: 0;
@@ -34,16 +43,18 @@
 	width: 100%;
 	margin-bottom: 25px;
 }
-.footer .container-fluid > div > p,
-.footer .container-fluid > div > span a {
-	font-family: "Futura LT Pro Body", Helvetica, sans-serif !important;
-	color: #fff;
-}
+
 .footer .container-fluid > div > p:nth-of-type(1) {
 	color: #ffcd00 !important;
 }
-
-.footer .container-fluid > div.first strong,
-.footer .container-fluid > div > p:nth-of-type(1) {
-    font-family: "Futura LT Pro Heading", Helvetica, sans-serif;
+.footer .container-fluid > div > p,
+.footer .container-fluid > div.first p,
+.footer .container-fluid div:nth-last-child(1),
+.footer .container-fluid > div > p span a {	
+	color: #fff !important;
 }
+
+.footer .container-fluid > div > p {
+	padding-bottom: 20px;
+}
+

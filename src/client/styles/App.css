@@ -12,19 +12,50 @@ body {
 	margin: auto;
 }
 
-span,
+/* Fonts are all established here */
+/*span,
 a,
 h6,
-h2,
+h2,*/
+.promo,
+.header nav .row ul li > a,
+.hero .float div a,
+.body div:nth-of-type(2) .container-fluid div h6,
+.body div:nth-of-type(2) .container-fluid.story div a,
+.b .container-fluid.half .col-md-6 h2,
+.container-fluid.half div:nth-child(2) a,
+.container-fluid.board ul li strong,
+.button.active a,
+.e .container-fluid.half div:nth-child(1) h2,
+.e .container-fluid > .col-md-6 a,
+.partner .col-md-12 h2,
+.leaderboard h2,
+.body div:nth-of-type(2) .container-fluid.leader div a,
+.container-fluid.board ul li a,
 .date,
-.mega-menu strong {
-	font-family: "Futura LT Pro Heading", Helvetica, sans-serif;
+.mega-menu strong,
+.footer .container-fluid > div > p:nth-of-type(1) {
+	font-family: "Futura LT Pro Heading", Helvetica, sans-serif !important;
 }
 
-.mega-menu a {
+.body div:nth-of-type(2) .container-fluid div p,
+.container-fluid.board ul li p,
+.b .container-fluid.half .col-md-6 p,
+.mega-menu a,
+.b .container-fluid.half > .col-md-6 p
+.footer .container-fluid > div > p,
+.footer .container-fluid > div > p span {
 	font-family: "Futura LT Pro Body", Helvetica, sans-serif !important;
 }
 
+.footer .container-fluid div p span.heavy {
+	display: inline-block;
+	margin-bottom: 5px;
+}
+
+.footer .container-fluid div p span.heavy a {
+	text-transform: uppercase;
+}
 
 .container-fluid.half {
 	padding: 40px 0 30px;
@@ -47,9 +78,7 @@ h2,
 	padding-left: 0;
 }
 
-.b .container-fluid.half > .col-md-6 p {
-	font-family: "Futura LT Pro Body", Helvetica, sans-serif;
-}
+
 
 .b .container-fluid.half div:nth-child(2) {
 	right: 0;
