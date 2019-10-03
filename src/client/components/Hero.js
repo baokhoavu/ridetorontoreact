@@ -1,22 +1,26 @@
 import React from 'react';
+import '../styles/Hero.css';
 
 const Hero = () => (
-	<div>		
-		<Router>
-			<nav>
-				<ul>
-					<li>
-						<Link to="/">Home</Link>
-					</li>
-					<li>
-						<Link to="/about">About</Link>
-					</li>
-				</ul>
-			</nav>
+	<div class="hero">
+       <div>   
+          <div class="grey">
+            <p>Help Conquer Cancer</p>
+            <div class="box">
+              <a href="#">Learn More</a>
+            </div>
+            <div class="row buttons">
+              <button></button>
+              <button></button>
+              <button></button>
+            </div>
+          </div>
 
-			<Route path="/about" component={About} />
-		</Router>
-	</div>
+          <div class="img">
+            <img />
+          </div>
+        </div>
+    </div>
 
 )
 

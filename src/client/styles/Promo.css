@@ -1,0 +1,60 @@
+.promo {
+	background: #0077bc;
+    color: #fff;
+    padding: 16px 0;
+    position: fixed;
+    display: block;
+    width: 100%;
+    z-index: 10;
+}
+
+.promo div {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: block;
+}
+
+.promo div > a {
+	color: #fff;
+    border: 2px solid #fff;
+    float: right;
+    margin-left: 10px;
+    width: 233px;
+    height: 40px;
+    position: relative;
+    text-align: center;
+    bottom: 7.5px;
+    line-height: 2.5;
+    transition: 0.4s;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.promo div> a:hover {
+    background: #fff;
+    color: #0077bc;
+}
+
+.promo div a.white {
+    background: #fff;
+    color: #0077bc;
+}
+
+.promo div a.white:hover {
+    background: #0077bc;
+    color: #fff;
+}
+
+.promo div span {
+    font-size: 14px;
+}
+
+.promo div span a {
+    float: unset;
+    color: #fff;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+.promo div span a:hover {
+    color: #eff;
+}

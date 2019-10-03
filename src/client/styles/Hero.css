@@ -1,0 +1,155 @@
+@font-face {
+    font-family: "Futura LT Pro Heading";
+    src: url(../fonts/FuturaLTPro-Bold.otf);
+}
+
+@font-face {
+    font-family: "Futura LT Pro Body";
+    src: url(../fonts/FuturaLTPro-Book.otf);
+}
+
+.hero {
+    background: #eee;
+}
+
+.hero > div {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 1280px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero .float {
+	/*display: inline-block;*/
+    padding: 0 25px;
+    width: 30%;
+    max-width: 380px;
+    min-height: 419px;
+    position: absolute;
+    z-index: 7;    
+    color: #fff;
+}
+
+.hero .float.fade {
+    background: #003E6A;
+    opacity: .8;
+}
+
+.hero .float p {
+	/*padding: 30px 0;*/
+    padding-top: 75px;
+	min-height: 250px;
+	font-size: 2.25em;
+    line-height: 1.25;
+    font-family: "Futura LT Pro Heading", Helvetica, sans-serif !important;
+    /*text-align: center;*/
+}
+
+.hero .float .box {
+	/*margin: 0 auto;*/
+	width: 63%;
+	min-height: 120px;
+}
+
+.hero .float .buttons {
+	width: 60px;
+	/*margin: 0 auto;*/
+}
+
+.hero .float div a {
+	border: 2px solid #003E6A;
+    background: #fff;
+    text-transform: uppercase;
+    width: 218px;
+    height: 50px;
+    letter-spacing: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #003E6A;
+    word-wrap: break-word;
+    text-align: center;
+    display: inline-block;
+    padding: 14px 0 3px;
+    text-decoration: none;
+    transition: 0.4s;
+    position: relative;
+    bottom: 0;
+}
+
+.hero .float div a:hover {
+	background: #003E6A;
+	color: #fff;
+}
+
+.hero .float div button {
+	display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 1px;
+    text-indent: -999px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid #fff;
+    background-color: transparent;
+    width: 15px !important;
+    height: 18px !important;
+    border: 2px solid #fff !important;
+}
+
+.hero .float div button.active {
+    background-color: #fff !important;
+}
+
+.hero .col-md-12 {
+    /*width: 70%;*/
+    /*float: right;*/
+    width: 100%;
+    display: block;
+    /*display: inline-block;*/
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.hero .img img {
+	width: 100%;
+	height: auto;
+	min-height: 420px;
+}
+
+.hero .img img.a {
+    background: url(https://ride.conquercancer.ca/toronto20/wp-content/uploads/2020/20015_RCTO_Website_Imagery/Phase2/Sliders/2020_HomePage_Phase2_slider_3.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    /*background-repeat: round;*/
+}
+
+.hero .img img.b {
+    background: url(https://ride.conquercancer.ca/toronto20/wp-content/uploads/2020/20015_RCTO_Website_Imagery/Phase2/Sliders/2020_HomePage_Phase2_slider_2.png) no-repeat;
+    background-size: cover;
+    background-position: topl
+    /*background-repeat: round;*/
+}
+
+.hero .img img.c {    
+    background: url(https://ride.conquercancer.ca/toronto20/wp-content/uploads/2020/20015_RCTO_Website_Imagery/Phase2/Sliders/2020_HomePage_Phase2_slider_1.png) no-repeat;
+    background-size: cover;
+    /*background-repeat: round;*/
+}
+
+.buttons button:focus {
+    outline: 0;
+}
+
+img.not,
+.h {
+    display: none !important;
+}
+
+.col-md-12 .active,
+.s {
+    display: block !important;
+}

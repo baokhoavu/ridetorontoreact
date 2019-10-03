@@ -1,0 +1,85 @@
+.header {
+	position: fixed;
+	width: 100%;
+	top: 56px;
+	background: #fff;
+	z-index: 10;
+}
+
+nav {
+	max-width: 1280px;
+	display: block;
+	margin: 0 auto;
+}
+
+nav .row a {
+	display: block;
+	max-width: 200px;
+	margin: 0 auto;
+	padding: 10px 0;
+	color: #000;
+	text-decoration: none;
+}
+
+nav .row a:hover {
+	color: #0076bc;
+	text-decoration: underline;
+}
+
+/*nav .row a:hover + .mega-menu {
+	display: block;
+}*/
+
+nav .row img.logo {
+	max-width: 200px;
+}
+
+nav .row img.internal.a {
+	width: 100%;
+	max-width: 262px;
+}
+
+nav div ul {
+	position: relative;
+	top: 30%;
+}
+
+nav div ul li {
+	display: inline-block;
+	margin: 0 10px;
+	float: right;
+}
+/*nav div ul li.impact a:hover {*/
+/*nav div ul li.a a:hover + .mega-menu {
+	displa: block;
+}*/
+
+nav .date p {
+	position: relative;
+	top: 45px;
+	/*text-align: center;*/
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+ul.horizontal > li:nth-child(2) > a,
+ul.horizontal > li:nth-child(3) > a,
+ul.horizontal > li:nth-child(4) > a {
+	letter-spacing: 2px;
+}
+
+.col-md-4.date {
+	padding-left: 70px !important;
+}
+
+.active {
+	/*display: block;*/
+	opacity: 1;
+}
+
+.hidden {
+	/*display: none;*/
+	opacity: 0;
+
+	
+}

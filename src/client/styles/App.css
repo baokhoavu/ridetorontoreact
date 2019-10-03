@@ -1,0 +1,303 @@
+@font-face {
+    font-family: "Futura LT Pro Heading";
+    src: url(../fonts/FuturaLTPro-Bold.otf);
+}
+
+@font-face {
+    font-family: "Futura LT Pro Body";
+    src: url(../fonts/FuturaLTPro-Book.otf);
+}
+
+body {
+	margin: auto;
+}
+
+span,
+a,
+h6,
+h2,
+.date,
+.mega-menu strong {
+	font-family: "Futura LT Pro Heading", Helvetica, sans-serif;
+}
+
+.mega-menu a {
+	font-family: "Futura LT Pro Body", Helvetica, sans-serif !important;
+}
+
+
+.container-fluid.half {
+	padding: 40px 0 30px;
+}
+
+.container-fluid.leader,
+.container-fluid.story {
+	padding: 20px 0 40px 0;
+}
+
+.container div {
+	display: inline-block;
+}
+
+.container-fluid.half div {
+	position: relative;
+}
+
+.b .container-fluid.half > .col-md-6 {
+	padding-left: 0;
+}
+
+.b .container-fluid.half > .col-md-6 p {
+	font-family: "Futura LT Pro Body", Helvetica, sans-serif;
+}
+
+.b .container-fluid.half div:nth-child(2) {
+	right: 0;
+	color: #fff;
+	bottom: 60px;
+	padding-right: 0;
+}
+
+.e .container-fluid.half div:nth-child(2) {
+	right: 0;
+	padding-right: 0;
+}
+
+.container-fluid.half div:nth-child(2) a {
+	border: 2px solid #fff;
+    padding: 10px 0;
+    width: 100%;
+    display: block;
+    text-transform: uppercase;
+    color: #fff;
+    max-width: 218px;
+    text-align: center;
+    transition: 0.4s;
+    text-decoration: none;
+    background: #003960;
+    transition: 0.4s;
+    position: relative;
+    bottom: -40px;
+}
+
+.container-fluid.half div:nth-child(2) a:hover {
+	color: #003960;
+	background: #fff;
+}
+
+
+.body {
+	z-index: 5;
+	padding-top: 170px;
+}
+
+.body div.b,
+.body div.e {
+    min-height: 325px;
+}
+
+.body div.b {
+	background: #003960;
+}
+
+.body div.e {
+	background: #0075c9;
+}
+.e .container-fluid.half div img,
+.b .container-fluid div img {
+	display: block;
+}
+
+.e .container-fluid.half div img {
+	width: 100%;
+}
+
+.e .container-fluid.half div:nth-child(1) {
+	left: 0;
+	bottom: 73px;
+	color: #fff;
+	padding-left: 0;
+}
+
+/*  Capitalize  'Together, Here's what we've accomplished'  */
+.e .container-fluid.half div:nth-child(1) h2 {
+	text-transform: uppercase;
+}
+
+/* Left Padding for Unordered List */
+.e .container-fluid.half > .col-md-6 ul {
+	padding-left: 19px !important;
+}
+
+.e .container-fluid.half > .col-md-6 ul {
+	padding: 3px 0;
+
+	/* Font */
+	font-family: "Futura LT Pro Body", Helvetica, sans-serif !important;
+}
+
+.e .container-fluid > .col-md-6 a {
+	border: 2px solid #fff;
+    padding: 10px 0;
+    width: 100%;
+    display: block;
+    text-transform: uppercase;
+    color: #fff;
+    max-width: 218px;
+    text-align: center;
+    transition: 0.4s;
+    text-decoration: none;
+    background: #0075c9;
+    transition: 0.4s;
+    position: relative;
+    bottom: -45px;
+}
+
+.e .container-fluid > .col-md-6 a:hover {
+	background: #fff;
+	color: #0075c9;
+}
+
+div div.f {
+	border-bottom: 5px solid #2A2A2A;
+}
+
+.body div:nth-of-type(2) .container-fluid div h6 {
+	letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: bolder;
+    color: #2b8bc3 !important;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.body div:nth-of-type(2) .container-fluid div p {
+	font-size: 13px;
+	text-align: center;
+}
+
+.body div:nth-of-type(2) .container-fluid div a:hover {
+	background: #2b8bc3;
+	color: #fff !important;
+}
+
+.body div:nth-of-type(2) .container-fluid.leader div {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.body div:nth-of-type(2) .container-fluid.leader div a {
+	padding: 10px 0;
+	display: block;
+	background: #fff;
+	color: #000;
+}
+
+.body div:nth-of-type(2) .container-fluid.leader div.active a {
+	background: #000 !important;
+	color: #fff !important;
+}
+
+.body div:nth-of-type(2) .container-fluid.story div a {
+	border: 2px solid #2b8bc3;
+    padding: 10px 0;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    text-transform: uppercase;
+    color: #2b8bc3;
+    max-width: 218px;
+    text-align: center;
+    transition: 0.4s;
+    text-decoration: none;
+}
+
+.container-fluid.story div img {
+	display: block;
+	margin: 0 auto;
+}
+
+.container-fluid.half,
+.container-fluid.story {
+	width: 100%;
+	max-width: 1280px;
+}
+
+.container-fluid.partner {
+	max-width: 1350px;
+	padding: 40px 0;
+	/*padding-left: 50px;*/
+	width: 100%;
+}
+
+.partner .col-md-3 {
+	display: inline-block;
+}
+
+.partner .col-md-3 > p {
+	text-align: center;
+	font-family: "Futura LT Pro Body", Helvetica, sans-serif !important;
+	text-transform: uppercase;
+	color: #707070;
+}
+
+img.partners {
+	width: 100%;
+}
+
+.partner div.col-md-12 {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.partner div.col-md-12:nth-child(2) {
+	padding-top: 40px;
+}
+
+.partner .col-md-12 h2 {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.container-fluid.half > .col-md-6,
+.container-fluid.story > .col-md-3 {
+	display: inline-block;
+}
+
+.body div:nth-child(3) div:nth-child(2) .container div:nth-child(1) {
+	background: #222;
+}
+
+.body div:nth-child(3) div:nth-child(2) .container div:nth-child(2) {
+	background: #333;
+}
+/*
+.body div:nth-of-type(4) {
+	padding: 40px 0;
+}*/
+
+.body div:nth-of-type(4) div {
+	display: inline-block;
+	/*width: 100%;*/
+	text-align: center;
+	padding-bottom: 0;
+}
+
+.body div:nth-of-type(4) div:nth-child(2) .container div:nth-child(1) {
+	border-left: 2px solid #000;
+	border-top: 2px solid #000;
+	border-bottom: 2px solid #000;
+}
+
+.body div:nth-of-type(4) div:nth-child(2) .container div:nth-child(2) {
+	border: 2px solid #000;
+}
+
+.body div:nth-of-type(4) div:nth-child(2) .container div:nth-child(3) {
+	border-top: 2px solid #000;
+	border-bottom: 2px solid #000;
+}
+
+.body div:nth-of-type(4) div:nth-child(2) .container div:nth-child(4) {
+	border: 2px solid #000;
+}

@@ -1,0 +1,131 @@
+.leaderboard {
+	padding: 40px 0 0;
+	max-width: 1280px;
+    margin: 0 auto;
+    padding-left: 0;
+}
+
+.leaderboard h2:nth-of-type(1) {
+	text-transform: uppercase;
+	padding-bottom: 20px;
+}
+
+.leaderboard div.c div {
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin-top: 15px;
+}
+
+.body div:nth-of-type(2) .container-fluid.leader div a {
+	/*border: 2px solid #000;*/
+	text-decoration: none;
+}
+
+.body div:nth-of-type(2) .container-fluid.leader div a:hover {
+	text-decoration: none;
+	background: #dcdcdc;
+	color: #000 !important;
+}
+
+.padding.a {
+	padding-top: 40px;
+}
+
+.button.active a {
+	color: #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 2px solid #000;
+    width: 256px;
+    padding: 10px 0;
+    margin: 0 auto;
+    transition: 0.4s;
+    display: block;
+    text-decoration: none;
+}
+
+.button.active a:hover {
+	color: #fff;
+	background: #000;
+}
+
+.leader a {
+	color: #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 2px solid #000;
+    width: 100%;
+    padding: 10px 0;
+    margin: 0 auto;
+    transition: 0.4s;
+    display: block;
+    font-weight: 700;
+    font-size: 18px;
+}
+.leader > div {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.container-fluid.board .col-md-6 {
+	display: none;
+}
+
+.container-fluid.board .col-md-6.active {
+	display: inline-block;
+}
+
+.container-fluid.board .leader a {
+	text-decoration: none;
+}
+.container-fluid.board .leader a:hover {
+	background: #000;
+	color: #fff;
+	text-decoration: none;
+}
+
+.container-fluid.board ul li {
+	list-style: none;
+	text-align: left;
+	margin-bottom: 30px;
+}
+
+.container-fluid.board ul li span {
+	background: #0075c9;
+	padding: 20px 25px;
+	position: relative;
+	top: 12.5px;
+	color: #fff;
+	font-size: 30px;
+}
+
+.container-fluid.board ul li a {
+	position: relative;
+	left: 20px;
+	top: -15px;
+}
+
+container-fluid.board ul li a:hover {
+	text-decoration: none;
+}
+
+.container-fluid.board ul li p {
+	position: relative;
+	left: 90px;
+	margin-bottom: 0;
+	bottom: 20px;
+}
+
+.hidden {
+	display: none !important;
+}
+
+@media screen and (min-width: 1200px) {
+	.container-fluid {
+		width: 1280px !important;
+		position: relative;
+		/*left: 15px;*/
+		/*width: 100% !important;*/
+	}
+}

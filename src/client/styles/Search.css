@@ -1,0 +1,132 @@
+@font-face {
+    font-family: "Futura LT Pro Heading";
+    src: url(../fonts/FuturaLTPro-Bold.otf);
+}
+
+@font-face {
+    font-family: "Futura LT Pro Body";
+    src: url(../fonts/FuturaLTPro-Book.otf);
+}
+
+div.d.search {
+	padding: 40px 0;
+    width: 1280px;
+    margin: 0 auto;
+}
+
+/*div.d.search > .container-fluid {
+
+}*/
+
+div.d.search ul {
+    padding-left: 0;
+}
+
+div.d.search > .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+    padding: 0;
+}
+
+div.d.search .container-fluid > div {
+	display: inline-block;
+}
+
+div.d.search .container-fluid button {
+	width: 100%;
+	background-color: rgb(226,226,226);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: "Futura LT Pro Heading", Helvetica;
+    letter-spacing: 3px;
+    height: 45px;
+    border: 1px solid rgb(226,226,226);	
+}
+
+div.d.search .container-fluid button:hover {
+    cursor: pointer;
+}
+
+div.d.search .container-fluid input {
+	width: 100%;
+    color: #767676;
+    background-color: #fdfdfd;
+    border: 1px solid #e3e3e3;
+    height: 45px;
+    text-indent: 10px;
+    font-family: "Futura LT Pro Body", Helvetica, sans-serif !important;
+    font-size: 14px;
+}
+
+div.d.search .container-fluid > div,
+div.d.search .container-fluid button {
+	padding: 0;
+}
+
+div.d.search .container-fluid > div > div {
+    display: none;
+}
+
+.container-fluid.search > div {
+    display: block !important;
+}
+
+.container-fluid.search > div > ul > li {
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+    padding: 30px 20px;
+    list-style: none;
+    border-left: 20px solid grey;
+    position: relative;
+    /*left: -25px;*/
+    margin-top: 25px;
+    height: 150px
+}
+
+.d .container-fluid.search > div > ul > li a {
+    color: #0075c9;
+    text-transform: uppercase;
+    border: 2px solid #0075c9;
+    padding: 15px 30px;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.d .container-fluid.search > div > ul > li a:hover {
+    text-decoration: none;
+    color: #fff;   
+    background: #0075c9;
+}
+
+.container-fluid.search > div > ul > li:hover {
+    border-left: 20px solid #FFCD02;
+}
+
+.container-fluid.search > div > ul > li > div {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.container-fluid.search > div > ul > li > div > .col-md-4 {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    min-height: 90px;
+}
+
+.container-fluid.search > div > ul > li > div > .col-md-4 span {
+    font-family: "Futura LT Pro Body", Helvetica, sans-serif !important;
+}
+
+.container-fluid.search > div > ul > li > div > .col-md-4 span.b {
+    position: absolute;
+    top: 62.5px;
+}
+
+.container-fluid.search > div > ul > li > div > .col-md-4 span.last {
+    margin-left: 5px;
+}
+
+.container-fluid.search > div > ul > li > div > .col-md-4 strong {
+    font-family: "Futura LT Pro Heading", Helvetica, sans-serif !important;
+}
