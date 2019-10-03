@@ -205,11 +205,11 @@ export default class Header extends Component {
 							</div>					
 						</nav>
 					</div>
-					<Route exact path="/q1e2/" component={Home} />
-					<Route path="/q1e2/about" component={About} />
+					{/*<Route exact path="/q1e2/" component={Home} />
+					<Route path="/q1e2/about" component={About} />*/}
 					
-					{/*<Route exact path="/" component={Home} />
-					<Route path="/about" component={About} />*/}
+					<Route exact path="/" component={Home} />
+					<Route path="/about" component={About} />
 				</Router>
 			</div>
 		)

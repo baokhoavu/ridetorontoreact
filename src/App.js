@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import Header from './components/Header';
-import Promo from './components/Promo';
-import Sponsors from './components/Sponsors';
-import Footer from './components/Footer';
-import './styles/App.css';
-import ReactImage from './react.png';
+import Header from './client/components/Header';
+import Promo from './client/components/Promo';
+import Sponsors from './client/components/Sponsors';
+import Footer from './client/components/Footer';
+import './client/styles/App.css';
+import ReactImage from './client/react.png';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 export default class App extends Component {
