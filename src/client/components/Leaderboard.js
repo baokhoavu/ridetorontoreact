@@ -67,77 +67,77 @@ export default class Leaderboard extends Component {
     // URL for Individual
     var urlb = 'https://secure.conquercancer.ca/site/CRTeamraiserAPI?method=getTopParticipantsData&api_key=cfrca&v=1.0&fr_id=1761&response_format=json';
 
-    // Team
-    fetch(url)
-      .then( res => {
-        return res.json();
-      })
-      .then( data => {
+    // // Team
+    // fetch(url)
+    //   .then( res => {
+    //     return res.json();
+    //   })
+    //   .then( data => {
 
-        // Update state of teams with array of teams
-        this.setState({ teams: data.getTeamSearchByInfoResponse.team });
+    //     // Update state of teams with array of teams
+    //     this.setState({ teams: data.getTeamSearchByInfoResponse.team });
         
 
-        // console.log(this.state.teams)
+    //     // console.log(this.state.teams)
 
-        // Sors by Most Raised and then picks top 100
-        this.state.teams.sort((a,b) => {
-          return b.amountRaised - a.amountRaised;
-        }).slice(0, 100)
+    //     // Sors by Most Raised and then picks top 100
+    //     this.state.teams.sort((a,b) => {
+    //       return b.amountRaised - a.amountRaised;
+    //     }).slice(0, 100)
 
-        // Empty Array for Community
-        const comms = [];
+    //     // Empty Array for Community
+    //     const comms = [];
 
-        // Loop to Update Array with Community
-        this.state.teams.map((index, value) => {
-          if ( index.divisionName === 'Community' ) {
-            comms.push(index)
-          }
-        })
+    //     // Loop to Update Array with Community
+    //     this.state.teams.map((index, value) => {
+    //       if ( index.divisionName === 'Community' ) {
+    //         comms.push(index)
+    //       }
+    //     })
 
-        // Update state of comms with array of Community
-        this.setState({ comms: comms })
+    //     // Update state of comms with array of Community
+    //     this.setState({ comms: comms })
 
-        // Empty Array for Corporate
-        const corps = [];
+    //     // Empty Array for Corporate
+    //     const corps = [];
 
-        // Loop to Update Array with eveyrthing not Community
-        this.state.teams.map((index, value) => {
-          if ( index.divisionName !== 'Community' ) {
-            corps.push(index)
-          }
-        })
+    //     // Loop to Update Array with eveyrthing not Community
+    //     this.state.teams.map((index, value) => {
+    //       if ( index.divisionName !== 'Community' ) {
+    //         corps.push(index)
+    //       }
+    //     })
 
-        // Update state of corps with array of Corporate
-        this.setState({ corps: corps })
+    //     // Update state of corps with array of Corporate
+    //     this.setState({ corps: corps })
         
-      })
+    //   })
 
-    // Individual
-    fetch(urlb)
-      .then( res => {
-        return res.json();
-      })
-      .then( data => {
+    // // Individual
+    // fetch(urlb)
+    //   .then( res => {
+    //     return res.json();
+    //   })
+    //   .then( data => {
 
-        // Update Array with Array of Top Individuals
-        this.setState({ indis: data.getTopParticipantsDataResponse.teamraiserData });
+    //     // Update Array with Array of Top Individuals
+    //     this.setState({ indis: data.getTopParticipantsDataResponse.teamraiserData });
         
-        // Sort by Most Raised
-        this.state.indis.sort((a,b) => {
-          return b.amountRaised - a.amountRaised;
-        }).slice(0, 100)
+    //     // Sort by Most Raised
+    //     this.state.indis.sort((a,b) => {
+    //       return b.amountRaised - a.amountRaised;
+    //     }).slice(0, 100)
 
-        // console.log(this.state.indis)
-      })
+    //     // console.log(this.state.indis)
+    //   })
 
   }
 
   render() {
 
     return (
-      <div class="c leaderboard">        
-        <div class="c">
+      <div className="c leaderboard">        
+        <div className="c">
 
           <div>
             <h2>Fundraising Leaderboards</h2>
@@ -145,7 +145,7 @@ export default class Leaderboard extends Component {
           </div>
 
           <div>
-            <div class="container-fluid leader">
+            <div className="container-fluid leader">
               <div className={this.state.team ? 'col-md-3 active': 'col-md-3'}>
                 <a onClick={this.onChangeA} href="#">Top Teams</a>
               </div>
@@ -162,7 +162,7 @@ export default class Leaderboard extends Component {
           </div>
 
           <div>
-            <div class="container-fluid board">
+            <div className="container-fluid board">
 
               {/* Top Teams 1 - 5 */}
               <div className={this.state.team ? 'col-md-6 active': 'col-md-6'}>
@@ -197,7 +197,7 @@ export default class Leaderboard extends Component {
               </div>
 
               <div className={this.state.team ? 'col-md-12 active button': 'col-md-12 hidden button'}>
-                  {/*<div class="padding a"></div>*/}
+                  {/*<div className="padding a"></div>*/}
                   <a href="#">
                       View Full List
                   </a>
@@ -234,7 +234,7 @@ export default class Leaderboard extends Component {
               </div>
 
               <div className={this.state.indi ? 'col-md-12 active button': 'col-md-12 hidden button'}>
-                  {/*<div class="padding a"></div>*/}
+                  {/*<div className="padding a"></div>*/}
                   <a href="#">
                       View Full List
                   </a>
@@ -273,7 +273,7 @@ export default class Leaderboard extends Component {
               </div>
 
               <div className={this.state.comm ? 'col-md-12 active button': 'col-md-12 hidden button'}>
-                  {/*<div class="padding a"></div>*/}
+                  {/*<div className="padding a"></div>*/}
                   <a href="#">
                       View Full List
                   </a>
@@ -310,7 +310,7 @@ export default class Leaderboard extends Component {
               </div>
 
               <div className={this.state.corp ? 'col-md-12 active button': 'col-md-12 hidden button'}>
-                  {/*<div class="padding a"></div>*/}
+                  {/*<div className="padding a"></div>*/}
                   <a href="#">
                       View Full List
                   </a>

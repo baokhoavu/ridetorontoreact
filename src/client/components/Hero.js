@@ -1,27 +1,27 @@
-import React from 'react';
-import '../styles/Hero.css';
+// import React from 'react';
+// import '../styles/Hero.css';
 
-const Hero = () => (
-	<div class="hero">
-       <div>   
-          <div class="grey">
-            <p>Help Conquer Cancer</p>
-            <div class="box">
-              <a href="#">Learn More</a>
-            </div>
-            <div class="row buttons">
-              <button></button>
-              <button></button>
-              <button></button>
-            </div>
-          </div>
+// const Hero = () => (
+// 	<div className="hero">
+//        <div>   
+//           <div className="grey">
+//             <p>Help Conquer Cancer</p>
+//             <div className="box">
+//               <a href="#">Learn More</a>
+//             </div>
+//             <div className="row buttons">
+//               <button></button>
+//               <button></button>
+//               <button></button>
+//             </div>
+//           </div>
 
-          <div class="img">
-            <img />
-          </div>
-        </div>
-    </div>
+//           <div className="img">
+//             <img />
+//           </div>
+//         </div>
+//     </div>
 
-)
+// )
 
-export default Hero;
+// export default Hero;

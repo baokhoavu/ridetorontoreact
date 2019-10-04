@@ -72,76 +72,76 @@ export default class Home extends Component {
       })
     })
 
-  	for (var i = 1; i < 7; i++) {
-  		fetch(urlp + i)
-			.then(res => {
-      	return res.json().then(data => {
-			    add(data)
-        })
-    	})
-  	}
+  	// for (var i = 1; i < 7; i++) {
+  	// 	fetch(urlp + i)
+			// .then(res => {
+   //    	return res.json().then(data => {
+			//     add(data)
+   //      })
+   //  	})
+  	// }
 
-    fetch(urlt)
-    .then(res => {
-      return res.json().then(data => {
-        this.setState({
-          b: data.getTeamSearchByInfoResponse.team
-        })
-      })
-    })
+   //  fetch(urlt)
+   //  .then(res => {
+   //    return res.json().then(data => {
+   //      this.setState({
+   //        b: data.getTeamSearchByInfoResponse.team
+   //      })
+   //    })
+   //  })
   }
 
   render() {
 
     return (
-      <div class="d search">
-      	<div class="container-fluid">
-	        <div class="col-md-9">
+      <div className="d search">
+      	<div className="container-fluid">
+	        <div className="col-md-9">
 	          <input placeholder="Enter a team or Rider here" onChange={this.handleKeyUp} onKeyDown={this.test} type="text" />
 	        </div>
-	        <div class="col-md-3">
+	        <div className="col-md-3">
 	          <button>Search</button>
 	        </div>
         </div>
-        <div class="container-fluid search">
+        <div className="container-fluid search">
 
         	<div>
-              	<ul class="a">
+              	<ul className="a">
                     {this.state.plist.map((val, index) => {
                         return <li key={index}>
                           <div>
-                            <div class="col-md-4">
+                            <div className="col-md-4">
                               <span><strong>{val.name.first} </strong></span>
-                              <span class="last"><strong>{val.name.last}</strong></span>
+                              <span className="last"><strong>{val.name.last}</strong></span>
                             </div>
-                            <div class="col-md-4">
+                            <div className="col-md-4">
                               <span>Team: <strong>{val.teamName}</strong></span>
                             </div>
-                            <div class="col-md-2">
+                            <div className="col-md-2">
                               <span><strong>$ {parseInt(val.amountRaised).toLocaleString()}</strong></span>
                             </div>
-                            <div class="col-md-2">
+                            <div className="col-md-2">
                               <strong><a href={val.personalPageUrl}>Donate</a></strong>
                             </div>
                           </div>
                         </li>
                     })}
               	</ul>
-                <ul class="b">
+                <ul className="b">
                     {this.state.tlist.map((val, index) => {
                         return <li key={index}>
                           <div>
-                            <div class="col-md-4">
+                            <div className="col-md-4">
                               <span><strong>{val.name}</strong></span>
                             </div>
-                            <div class="col-md-4">
+                            <div className="col-md-4">
                               <span><strong>Captain:</strong> {val.captainFirstName} {val.captainLastName}</span>
-                              <span class="b"><strong>Members: {val.numMembers}</strong></span>
+                              <span className="b"><strong>Members: {val.numMembers}</strong></span>
                             </div>
-                            <div class="col-md-2">
+                            <div className="col-md-2">
                               <span><strong>${parseInt(val.amountRaised).toLocaleString()}</strong></span>
                             </div>
-                            <div class="col-md-2">
+                            <div className="col-md-2">
                               <strong><a href={val.teamPageURL}>Donate</a></strong>
                             </div>
                           </div>

@@ -26,10 +26,6 @@ nav .row a:hover {
 	text-decoration: underline;
 }
 
-/*nav .row a:hover + .mega-menu {
-	display: block;
-}*/
-
 nav .row img.logo {
 	max-width: 200px;
 }
@@ -49,10 +45,6 @@ nav div ul li {
 	margin: 0 10px;
 	float: right;
 }
-/*nav div ul li.impact a:hover {*/
-/*nav div ul li.a a:hover + .mega-menu {
-	displa: block;
-}*/
 
 nav .date p {
 	position: relative;
@@ -72,14 +64,52 @@ ul.horizontal > li:nth-child(4) > a {
 	padding-left: 70px !important;
 }
 
+.col-md-4.right {
+    float: right;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    /*width: 220px;*/
+    text-align: center;
+    padding: 25px 0 5px;
+    background: #fff;
+    position: absolute;
+    /*min-height: 150px;*/
+    top: 40px;
+}
+
+.col-md-4.right a {
+	/*margin: 15px auto;*/
+	margin: 0 auto 20px;
+	/*border: 2px solid #0075c9;*/
+    width: 190px;
+    border: 3px solid #0075c9;
+    color: #0075c9;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.col-md-4.right div:nth-child(1) a {
+	background: #0075c9;
+	color: #fff;
+}
+
+.col-md-4.right div:nth-child(1) a:hover {
+	background: #fff;
+	color: #0075c9;
+	text-decoration: none;
+}
+
+.col-md-4.right div:nth-child(2) a:hover {
+	background: #0075c9;
+	color: #fff;
+	text-decoration: none;
+}
+
 .active {
-	/*display: block;*/
 	opacity: 1;
 }
 
 .hidden {
-	/*display: none;*/
 	opacity: 0;
-
-	
 }

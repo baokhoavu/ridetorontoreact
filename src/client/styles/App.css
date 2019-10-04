@@ -34,6 +34,7 @@ h2,*/
 .container-fluid.board ul li a,
 .date,
 .mega-menu strong,
+.col-md-4.right a,
 .footer .container-fluid > div > p:nth-of-type(1) {
 	font-family: "Futura LT Pro Heading", Helvetica, sans-serif !important;
 }
