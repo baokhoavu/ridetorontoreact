@@ -34,7 +34,7 @@ export default class Header extends Component {
 						<a href="https://ride.conquercancer.ca/toronto20/impact/tour-pmcc/">Tour the pmcf</a>
 					</div>
 					<div className="col-md-3 internal">
-						<img src="https://ride.conquercancer.ca/toronto20/wp-content/uploads/2019/05/20007_rcto_megamenu_adcopy_conquercancer.jpg" />
+						<img src="https://ride.conquercancer.ca/toronto20/wp-content/uploads/2019/05/20007_rcto_megamenu_adcopy_conquercancer.jpg" alt="ride" />
 					</div>
 					<div className="col-md-3"></div>			
 				</div>

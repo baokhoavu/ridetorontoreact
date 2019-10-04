@@ -1,9 +1,9 @@
 // Imported Components and built in React/library functionality
 import React, { Component } from 'react';
-import About from '../pages/About';
+// import About from '../pages/About';
 import Home from '../pages/Home';
-import Megamenu from './Megamenu';
-import { connect } from 'react-redux';
+// import Megamenu from './Megamenu';
+// import { connect } from 'react-redux';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 // Styles
@@ -104,7 +104,7 @@ export default class Header extends Component {
 									<a href="https://secure.conquercancer.ca/q1e2">
 
 										{/* Logo */}
-										<img className="logo" src="https://ride.conquercancer.ca/toronto19/wp-content/uploads/2018/06/rcto_eventlogo_enbupdate_rgb.png" />
+										<img className="logo" src="https://ride.conquercancer.ca/toronto19/wp-content/uploads/2018/06/rcto_eventlogo_enbupdate_rgb.png" alt="image" />
 									</a>
 								</div>
 
@@ -119,7 +119,7 @@ export default class Header extends Component {
 								<div className="col-md-6">
 									<ul className="horizontal">
 										<li>
-											<a href="#" onClick={this.login} >Sign In</a>
+											<a className="heavy" onClick={this.login} >Sign In</a>
 
 											{/* Login Box */}
 											<div className={this.state.login ? 'loginShow col-md-4 right' : 'hidden' }>
@@ -232,10 +232,10 @@ export default class Header extends Component {
 							</div>					
 						</nav>
 					</div>
-					{/*<Route exact path="/q1e2/" component={Home} />
-					<Route path="/q1e2/about" component={About} />*/}
+					<Route exact path="/q1e2/" component={Home} />
+					<Route path="/q1e2/about" component={About} />
 					
-					<Route exact path="/" component={Home} />
+					{/*<Route exact path="/" component={Home} />*/}
 					{/*<Route path="/about" component={About} />*/}
 				</Router>
 			</div>
