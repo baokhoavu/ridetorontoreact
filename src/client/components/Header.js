@@ -101,7 +101,7 @@ export default class Header extends Component {
 						<nav>
 							<div className="row">
 								<div className="col-md-2">
-									<a href="https://secure.conquercancer.ca/q1e2">
+									<a href="https://secure.conquercancer.ca/devReactBao">
 
 										{/* Logo */}
 										<img className="logo" src="https://ride.conquercancer.ca/toronto19/wp-content/uploads/2018/06/rcto_eventlogo_enbupdate_rgb.png" alt="image" />
@@ -119,7 +119,11 @@ export default class Header extends Component {
 								<div className="col-md-6">
 									<ul className="horizontal">
 										<li>
-											<a className="heavy" onClick={this.login} >Sign In</a>
+											
+											{/* Login Text Clickable */}
+											<a className="heavy" onClick={this.login}>
+												Sign In
+											</a>
 
 											{/* Login Box */}
 											<div className={this.state.login ? 'loginShow col-md-4 right' : 'hidden' }>
@@ -132,39 +136,42 @@ export default class Header extends Component {
 											</div>
 										</li>
 										<li>
-											<Link className={this.state.get ? 'over' : null } onMouseOver={this.toggleCOn} onMouseOut={this.toggleCOff} to="/q1e2/gi">Get Involved</Link>
+											{/*<Link className={this.state.get ? 'over' : null } onMouseOver={this.toggleCOn} onMouseOut={this.toggleCOff} to="/q1e2/gi">Get Involved</Link>*/}
+
+											<a className={this.state.get ? 'over heavy' : null } onMouseOver={this.toggleCOn} onMouseOut={this.toggleCOff}>
+												Get Involved
+											</a>
 
 											{/* Get Involved Mega Menu*/}
 											<div onMouseOver={this.toggleCOn} onMouseOut={this.toggleCOff} className={this.state.get ? 'mega-menu get active': 'mega-menu get hidden'}>		
 												<div className="row">
 													<div className="col-md-1"></div>
 													<div className="col-md-2">
-														<a href="#"><strong>Riders</strong></a>
-														<a href="#">Top fundraisers</a>
-														<a href="#">Ambassadors</a>
-														<a href="#">Polka dot jersey</a>
-														<a href="#">5 and 10 year riders</a>
-														<a href="#">Riders' stories</a>
+														<a><strong>Riders</strong></a>
+														<a href="https://secure.conquercancer.ca/site/SPageNavigator/to20_top_fundraisers">Top fundraisers</a>
+														<a href="https://secure.conquercancer.ca/site/SPageNavigator/to20_ambassador">Ambassadors</a>
+														<a href="https://ride.conquercancer.ca/toronto20/get-involved/polka-dot-jersey/">Polka dot jersey</a>
+														<a href="https://ride.conquercancer.ca/toronto20/get-involved/gold-platinum-helmets/">5 and 10 year riders</a>
+														<a href="https://ride.conquercancer.ca/toronto20/get-involved/rider-stories/">Riders' stories</a>
 													</div>
 													<div className="col-md-2">
-														<a href="#"><strong>Teams</strong></a>
-														<a href="#">Top teams</a>
-														<a href="#">Ride as a team</a>
-														<a href="#">Industry challenge</a>
-														<a href="#">Community challenge</a>
+														<a><strong>Teams</strong></a>
+														<a href="https://secure.conquercancer.ca/site/SPageNavigator/to20_top_teams">Top teams</a>
+														<a href="https://ride.conquercancer.ca/toronto20/get-involved/ride-as-a-team/">Ride as a team</a>
+														<a href="https://secure.conquercancer.ca/site/SPageNavigator/to20_industry_challenge">Industry challenge</a>
+														<a href="https://secure.conquercancer.ca/site/SPageNavigator/to20_community_challenge">Community challenge</a>
 													</div>
 													<div className="col-md-2">
-														<a href="#"><strong>Crew and volunteer</strong></a>
-														<a href="#">How you can help</a>
-														<a href="#">Important info</a>
-														<a href="#">Join as a group</a>
-														<a href="#">Our support</a>
+														<a><strong>Crew and volunteer</strong></a>
+														<a href="https://ride.conquercancer.ca/toronto20/get-involved/crew-and-volunteer/">How you can help</a>
+														<a href="https://ride.conquercancer.ca/toronto20/get-involved/important-info/">Important info</a>
+														<a href="https://ride.conquercancer.ca/toronto20/get-involved/crew-and-volunteer/join-as-a-group/">Join as a group</a>
+														<a href="https://ride.conquercancer.ca/toronto20/get-involved/crew-and-volunteer/our-support/">Our support</a>
 													</div>
 													<div className="col-md-2">
-														<a href="#"><strong>Fundraising</strong></a>
-														<a href="#">Toolkit</a>
-														<a href="#">Refer and raise</a>
-														<a href="#">Workplace giving</a>
+														<a><strong>Fundraising</strong></a>
+														<a href="https://ride.conquercancer.ca/toronto20/get-involved/fundraising/">Toolkit</a>
+														<a href="https://ride.conquercancer.ca/toronto20/fundraising/refer-and-raise/">Refer and raise</a>
 													</div>
 													<div className="col-md-3 internal a">														
 														<img src="https://ride.conquercancer.ca/toronto20/wp-content/uploads/2019/05/20007_rcto_megamenu_adcopy_2020volunteer.jpg" />
@@ -174,7 +181,7 @@ export default class Header extends Component {
 										</li>
 										<li>
 											{/* About Link */}
-											<Link className={this.state.about ? 'over' : null } onMouseOver={this.toggleBOn} onMouseOut={this.toggleBOff} to="/q1e2/about">About</Link>
+											<Link className={this.state.about ? 'over' : null } onMouseOver={this.toggleBOn} onMouseOut={this.toggleBOff} to="https://ride.conquercancer.ca/toronto20/about/">About</Link>
 
 											{/* About Mega Menu*/}
 											<div onMouseOver={this.toggleBOn} onMouseOut={this.toggleBOff} className={this.state.about ? 'mega-menu about active': 'mega-menu about hidden'}>		
@@ -182,21 +189,21 @@ export default class Header extends Component {
 													<div className="col-md-3"></div>
 													<div className="col-md-2">
 														<a href="#"><strong>Ride</strong></a>
-														<a href="#">About the ride</a>
-														<a href="#">Find your route</a>
-														<a href="#">Events Calendar</a>
-														<a href="#">Training & Safety</a>
-														<a href="#">How we support you</a>
+														<a href="https://ride.conquercancer.ca/toronto20/about/">About the ride</a>
+														<a href="https://ride.conquercancer.ca/toronto20/about/find-your-route/">Find your route</a>
+														<a href="https://ride.conquercancer.ca/toronto20/calendar-of-events/">Events Calendar</a>
+														<a href="https://ride.conquercancer.ca/toronto20/about/training-safety/">Training & Safety</a>
+														<a href="https://ride.conquercancer.ca/toronto20/about/how-we-support-you/">How we support you</a>
 													</div>
 													<div className="col-md-2">
-														<a href="#"><strong>Partners</strong></a>
-														<a href="#">Our partners</a>
-														<a href="#">Outfitters</a>
+														<a href="https://ride.conquercancer.ca/toronto20/about/partners/"><strong>Partners</strong></a>
+														<a href="https://ride.conquercancer.ca/toronto20/about/partners/">Our partners</a>
+														<a href="https://ride.conquercancer.ca/toronto20/about/outfitters/">Outfitters</a>
 													</div>
 													<div className="col-md-2">
-														<a href="#"><strong>News</strong></a>
-														<a href="#">Photos</a>
-														<a href="#">Videos</a>
+														<a href="https://ride.conquercancer.ca/toronto20/about/media/"><strong>News</strong></a>
+														<a href="http://www.pmcfphotos.ca/therideto">Photos</a>
+														<a href="https://ride.conquercancer.ca/toronto20/videos/">Videos</a>
 													</div>
 													<div className="col-md-3 internal b">
 														<img src="https://ride.conquercancer.ca/toronto20/wp-content/uploads/2019/05/20007_rcto_megamenu_adcopy_2019thankyou.jpg" />
@@ -206,16 +213,16 @@ export default class Header extends Component {
 										</li>
 										<li className="a">
 											{/* Impact Link */}
-											<Link className={this.state.impact ? 'over' : null } onMouseOver={this.toggleAOn} onMouseOut={this.toggleAOff} to="/q1e2/impact">Impact</Link>
+											<Link className={this.state.impact ? 'over' : null } onMouseOver={this.toggleAOn} onMouseOut={this.toggleAOff} to="https://ride.conquercancer.ca/toronto20/impact/dollars-at-work/">Impact</Link>
 
 											{/* Impact Mega Menu*/}
 											<div onMouseOver={this.toggleAOn} onMouseOut={this.toggleAOff} className={this.state.impact ? 'mega-menu impact active': 'mega-menu impact hidden'}>		
 												<div className="row">
 													<div className="col-md-3"></div>
 													<div className="col-md-3">
-														<a href="#"><strong>Dollars at work</strong></a>
-														<a href="#"><strong>Cancer in canada</strong></a>
-														<a href="#"><strong>Tour the pmcf</strong></a>
+														<a href="https://ride.conquercancer.ca/toronto20/impact/dollars-at-work/"><strong>Dollars at work</strong></a>
+														<a href="https://ride.conquercancer.ca/toronto20/impact/about-cancer/"><strong>Cancer in canada</strong></a>
+														<a href="https://ride.conquercancer.ca/toronto20/impact/tour-pmcc/"><strong>Tour the pmcf</strong></a>
 													</div>
 													<div className="col-md-3 internal c">
 														<img src="https://ride.conquercancer.ca/toronto20/wp-content/uploads/2019/05/20007_rcto_megamenu_adcopy_conquercancer.jpg" />
@@ -225,14 +232,14 @@ export default class Header extends Component {
 											</div>
 										</li>
 										<li>
-											<Link to="/q1e2/">Home</Link>
+											<Link to="/devReactBao/">Home</Link>
 										</li>
 									</ul>
 								</div>
 							</div>					
 						</nav>
 					</div>
-					<Route exact path="/q1e2/" component={Home} />
+					<Route exact path="/devReactBao/" component={Home} />
 					
 					{/*<Route exact path="/" component={Home} />*/}
 				</Router>

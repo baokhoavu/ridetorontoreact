@@ -20,6 +20,13 @@
 	font-size: 14px;
 }
 
+.mega-menu .row div a:hover,
+.mega-menu strong:hover {
+	color: #fff;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
 .internal img {
 	height: auto;
 	max-width: auto;

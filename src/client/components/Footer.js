@@ -20,7 +20,7 @@ const Footer = () => (
 			<div className="col-md-3 first">
 				
 				{/* Logo */}
-				<a href="https://secure.conquercancer.ca/q1e2/">
+				<a href="https://secure.conquercancer.ca/devReactBao/">
 					<img className="logo" src="https://ride.conquercancer.ca/toronto19/wp-content/uploads/2018/06/rcto_eventlogo_enbupdate_rgb.png" alt="logo" />
 				</a>
 
