@@ -1,11 +1,13 @@
+// Imported Styles and Middleware
 import '../styles/Search.css';
 import React, { Component } from 'react';
-import axios from 'axios';
 
+// Class based Component
 export default class Home extends Component {
   constructor(props) {
     super(props);
 
+    // State Variable
     this.state = {
         a: [],
         b: [],
@@ -15,31 +17,36 @@ export default class Home extends Component {
         searchVal: '',
     }
 
+    // Bind Event
     this.handleKeyUp = this.handleKeyUp.bind(this);
 
   }
 
+  // Save Input Value
   handleKeyUp(e) {
+
+    // Bind to State Variable
     this.setState({ searchVal: e.target.value });
 
-    const timerID = setTimeout( () => {
+    setTimeout( () => {
 
+      // Array for JSON
       const peopleList = [];
       const teamList = [];
 
+      // Search Input at least 3 characters
       if (this.state.searchVal.length > 2) {
 
-
+        // Map through All Participants
         this.state.a.map((v, i) => {
           if (v.name.last.toUpperCase().indexOf(this.state.searchVal.toUpperCase()) > -1) {
              peopleList.push(v)
-             console.log(v)
           } else if (v.name.first.toUpperCase().indexOf(this.state.searchVal.toUpperCase()) > -1) {
              peopleList.push(v)
-             console.log(v)
           }
         })
 
+        // Map through All Teams
         this.state.b.map((v, i) => {
           if ( v.name.toUpperCase().indexOf(this.state.searchVal.toUpperCase()) > -1 ) {
             teamList.push(v)
@@ -47,6 +54,7 @@ export default class Home extends Component {
           }
         })
         
+        // Change state to array filtered from API
         this.setState({ tlist: teamList })
         this.setState({ plist: peopleList })
         
@@ -55,13 +63,19 @@ export default class Home extends Component {
   }
 
   componentDidMount() {
-	  const urlp = 
+	 
+    // Participants API
+    const urlp = 
       'https://secure.conquercancer.ca/site/CRTeamraiserAPI?method=getParticipants&api_key=cfrca&v=1.0&fr_id=1761&full_search=TRUE&first_name=%25%25%25&last_name=%25%25%25&response_format=json&list_page_size=500&list_page_offset=';
+    
+    // Team API
     const urlt = 
       'https://secure.conquercancer.ca/site/CRTeamraiserAPI?method=getTeamsByInfo&api_key=cfrca&v=1.0&fr_id=1761&list_page_size=500&response_format=json';
 
+    // Array for People
 	  const people = [];
 	
+    // Data to map array from JSON into local Array
     const add = (data => {
       const a = data.getParticipantsResponse.participant;
       a.map((val, index) => {
@@ -72,23 +86,25 @@ export default class Home extends Component {
       })
     })
 
-  	// for (var i = 1; i < 7; i++) {
-  	// 	fetch(urlp + i)
-			// .then(res => {
-   //    	return res.json().then(data => {
-			//     add(data)
-   //      })
-   //  	})
-  	// }
+    // Loop through JSON for available data and then map to push into local Array
+  	for (var i = 1; i < 7; i++) {
+  		fetch(urlp + i)
+			.then(res => {
+      	return res.json().then(data => {
+			    add(data)
+        })
+    	})
+  	}
 
-   //  fetch(urlt)
-   //  .then(res => {
-   //    return res.json().then(data => {
-   //      this.setState({
-   //        b: data.getTeamSearchByInfoResponse.team
-   //      })
-   //    })
-   //  })
+    // Fetch Data for Team API
+    fetch(urlt)
+    .then(res => {
+      return res.json().then(data => {
+        this.setState({
+          b: data.getTeamSearchByInfoResponse.team
+        })
+      })
+    })
   }
 
   render() {
@@ -97,7 +113,9 @@ export default class Home extends Component {
       <div className="d search">
       	<div className="container-fluid">
 	        <div className="col-md-9">
-	          <input placeholder="Enter a team or Rider here" onChange={this.handleKeyUp} onKeyDown={this.test} type="text" />
+
+            {/* When Value Changes */}
+	          <input placeholder="Enter a team or Rider here" onChange={this.handleKeyUp} type="text" />
 	        </div>
 	        <div className="col-md-3">
 	          <button>Search</button>
@@ -107,6 +125,8 @@ export default class Home extends Component {
 
         	<div>
               	<ul className="a">
+
+                    {/* Loop through Participant List from Search Val and render */}
                     {this.state.plist.map((val, index) => {
                         return <li key={index}>
                           <div>
@@ -128,6 +148,8 @@ export default class Home extends Component {
                     })}
               	</ul>
                 <ul className="b">
+
+                    {/* Loop through Team List from Search Val and render */}
                     {this.state.tlist.map((val, index) => {
                         return <li key={index}>
                           <div>

@@ -1,11 +1,17 @@
+// Imported Styles
 import '../styles/Leaderboard.css';
 import '../styles/Home.css';
+
+// Imported Middleware
 import React, { Component } from 'react';
 
+
+// Class basec Component
 export default class Leaderboard extends Component {
   constructor(props) {
     super(props);
 
+    // State Variables
     this.state = {
       
       // Leaderboard Accordion Tabs
@@ -67,69 +73,65 @@ export default class Leaderboard extends Component {
     // URL for Individual
     var urlb = 'https://secure.conquercancer.ca/site/CRTeamraiserAPI?method=getTopParticipantsData&api_key=cfrca&v=1.0&fr_id=1761&response_format=json';
 
-    // // Team
-    // fetch(url)
-    //   .then( res => {
-    //     return res.json();
-    //   })
-    //   .then( data => {
+    // Team
+    fetch(url)
+      .then( res => {
+        return res.json();
+      })
+      .then( data => {
 
-    //     // Update state of teams with array of teams
-    //     this.setState({ teams: data.getTeamSearchByInfoResponse.team });
+        // Update state of teams with array of teams
+        this.setState({ teams: data.getTeamSearchByInfoResponse.team });
         
+        // Sors by Most Raised and then picks top 100
+        this.state.teams.sort((a,b) => {
+          return b.amountRaised - a.amountRaised;
+        }).slice(0, 100)
 
-    //     // console.log(this.state.teams)
+        // Empty Array for Community
+        const comms = [];
 
-    //     // Sors by Most Raised and then picks top 100
-    //     this.state.teams.sort((a,b) => {
-    //       return b.amountRaised - a.amountRaised;
-    //     }).slice(0, 100)
+        // Loop to Update Array with Community
+        this.state.teams.map((index, value) => {
+          if ( index.divisionName === 'Community' ) {
+            comms.push(index)
+          }
+        })
 
-    //     // Empty Array for Community
-    //     const comms = [];
+        // Update state of comms with array of Community
+        this.setState({ comms: comms })
 
-    //     // Loop to Update Array with Community
-    //     this.state.teams.map((index, value) => {
-    //       if ( index.divisionName === 'Community' ) {
-    //         comms.push(index)
-    //       }
-    //     })
+        // Empty Array for Corporate
+        const corps = [];
 
-    //     // Update state of comms with array of Community
-    //     this.setState({ comms: comms })
+        // Loop to Update Array with eveyrthing not Community
+        this.state.teams.map((index, value) => {
+          if ( index.divisionName !== 'Community' ) {
+            corps.push(index)
+          }
+        })
 
-    //     // Empty Array for Corporate
-    //     const corps = [];
-
-    //     // Loop to Update Array with eveyrthing not Community
-    //     this.state.teams.map((index, value) => {
-    //       if ( index.divisionName !== 'Community' ) {
-    //         corps.push(index)
-    //       }
-    //     })
-
-    //     // Update state of corps with array of Corporate
-    //     this.setState({ corps: corps })
+        // Update state of corps with array of Corporate
+        this.setState({ corps: corps })
         
-    //   })
+      })
 
-    // // Individual
-    // fetch(urlb)
-    //   .then( res => {
-    //     return res.json();
-    //   })
-    //   .then( data => {
+    // Individual
+    fetch(urlb)
+      .then( res => {
+        return res.json();
+      })
+      .then( data => {
 
-    //     // Update Array with Array of Top Individuals
-    //     this.setState({ indis: data.getTopParticipantsDataResponse.teamraiserData });
+        // Update Array with Array of Top Individuals
+        this.setState({ indis: data.getTopParticipantsDataResponse.teamraiserData });
         
-    //     // Sort by Most Raised
-    //     this.state.indis.sort((a,b) => {
-    //       return b.amountRaised - a.amountRaised;
-    //     }).slice(0, 100)
+        // Sort by Most Raised
+        this.state.indis.sort((a,b) => {
+          return b.amountRaised - a.amountRaised;
+        }).slice(0, 100)
 
-    //     // console.log(this.state.indis)
-    //   })
+      })
 
   }
 
@@ -165,15 +167,15 @@ export default class Leaderboard extends Component {
             <div className="container-fluid board">
 
               {/* Top Teams 1 - 5 */}
-              <div className={this.state.team ? 'col-md-6 active': 'col-md-6'}>
+              <div className={this.state.team ? 'col-md-6 active l': 'col-md-6'}>
                   <ul>
                     {this.state.teams.map((team, index) => {
                       if ( index <= 4 ) {
-                        return <li key={index}>
-                          <span>{index}</span>
-                          <a href="#">{team.name}</a>
+                        return <li key={index + 1}>
+                          <span>{index + 1}</span>
+                          <a target="_blank" href={team.teamPageURL} >{team.name}</a>
                           <p>Members: <strong>{team.numMembers}</strong></p>
-                          <p><strong>$ {parseInt(team.amountRaised).toLocaleString('en')}</strong></p>
+                          <p><strong>${parseInt(team.amountRaised).toLocaleString('en')}</strong></p>
                           </li>
                       }
                     })}
@@ -181,15 +183,15 @@ export default class Leaderboard extends Component {
               </div>
 
               {/* Top Teams 6 - 10 */}
-              <div className={this.state.team ? 'col-md-6 active': 'col-md-6'}>
+              <div className={this.state.team ? 'col-md-6 active r': 'col-md-6'}>
                   <ul>
                     {this.state.teams.map((team, index) => {
                       if ( index > 4 && index < 10 ) {
-                        return <li key={index}>
-                          <span>{index}</span>
-                          <a href="#">{team.name}</a>
+                        return <li key={index + 1}>
+                          <span>{index + 1}</span>
+                          <a target="_blank" href={team.teamPageURL} >{team.name}</a>
                           <p>Members: <strong>{team.numMembers}</strong></p>
-                          <p><strong>$ {parseInt(team.amountRaised).toLocaleString('en')}</strong></p>
+                          <p><strong>${parseInt(team.amountRaised).toLocaleString('en')}</strong></p>
                           </li>
                       }
                     })}
@@ -198,19 +200,21 @@ export default class Leaderboard extends Component {
 
               <div className={this.state.team ? 'col-md-12 active button': 'col-md-12 hidden button'}>
                   {/*<div className="padding a"></div>*/}
-                  <a href="#">
+                  <a target="_blank" href="#">
                       View Full List
                   </a>
               </div>
 
               {/* Top Individuals 1 - 5 */}
-              <div className={this.state.indi ? 'col-md-6 active': 'col-md-6'}>
+              <div className={this.state.indi ? 'col-md-6 active l': 'col-md-6'}>
                   <ul>
                     {this.state.indis.map((indi, index) => {
                       if ( index <= 4 ) {
-                        return <li key={index}>
-                          <span>{index}</span>
-                          <a href="#">{indi.name}</a>
+                        return <li key={index + 1}>
+                          <span>{index + 1}</span>
+                          <a target="_blank" href={'https://secure.conquercancer.ca/site/TR/Ride/Toronto2020?px=' + indi.id + '&pg=personal&fr_id=1761'}>
+                            {indi.name}
+                          </a>
                           <p><strong>{indi.total}</strong></p>
                           </li>
                       }
@@ -219,13 +223,15 @@ export default class Leaderboard extends Component {
               </div>
 
               {/* Top Individuals 6 - 10 */}
-              <div className={this.state.indi ? 'col-md-6 active': 'col-md-6'}>
+              <div className={this.state.indi ? 'col-md-6 active r': 'col-md-6'}>
                   <ul>
                     {this.state.indis.map((indi, index) => {
                       if ( index > 4 && index < 10 ) {
-                        return <li key={index}>
-                          <span>{index}</span>
-                          <a href="#">{indi.name}</a>
+                        return <li key={index + 1}>
+                          <span>{index + 1}</span>
+                          <a target="_blank" href={'https://secure.conquercancer.ca/site/TR/Ride/Toronto2020?px=' + indi.id + '&pg=personal&fr_id=1761'}>
+                            {indi.name}
+                          </a>
                           <p><strong>{indi.total}</strong></p>
                           </li>
                       }
@@ -235,21 +241,21 @@ export default class Leaderboard extends Component {
 
               <div className={this.state.indi ? 'col-md-12 active button': 'col-md-12 hidden button'}>
                   {/*<div className="padding a"></div>*/}
-                  <a href="#">
+                  <a target="_blank" href="#">
                       View Full List
                   </a>
               </div>
 
               {/* Top Community 1 - 5 */}
-              <div className={this.state.comm ? 'col-md-6 active comm': 'col-md-6 comm'}>
+              <div className={this.state.comm ? 'col-md-6 active comm l': 'col-md-6 comm'}>
                   <ul>
                     {
                       this.state.comms.map((comm, index) => {
                         if ( index <= 4 ) {
-                          return <li key={index}>
-                          <span>{index}</span>
-                          <a href="#">{comm.name}</a>
-                          <p><strong>$ {parseInt(comm.amountRaised).toLocaleString('en')}</strong></p>
+                          return <li key={index + 1}>
+                          <span>{index + 1}</span>
+                          <a target="_blank" href={comm.teamPageURL} >{comm.name}</a>
+                          <p><strong>${parseInt(comm.amountRaised).toLocaleString('en')}</strong></p>
                           </li>
                         }
                       })
@@ -258,14 +264,14 @@ export default class Leaderboard extends Component {
               </div>
 
               {/* Top Community 6 - 10 */}
-              <div className={this.state.comm ? 'col-md-6 active comm': 'col-md-6 comm'}>
+              <div className={this.state.comm ? 'col-md-6 active comm r': 'col-md-6 comm'}>
                   <ul>
                     {this.state.comms.map((comm, index) => {
                       if ( index > 4 && index < 10 ) {
-                        return <li key={index}>
-                          <span>{index}</span>
-                          <a href="#">{comm.name}</a>
-                          <p><strong>$ {parseInt(comm.amountRaised).toLocaleString('en')}</strong></p>
+                        return <li key={index + 1}>
+                          <span>{index + 1}</span>
+                          <a target="_blank" href={comm.teamPageURL} >{comm.name}</a>
+                          <p><strong>${parseInt(comm.amountRaised).toLocaleString('en')}</strong></p>
                           </li>
                       }
                     })}
@@ -274,20 +280,20 @@ export default class Leaderboard extends Component {
 
               <div className={this.state.comm ? 'col-md-12 active button': 'col-md-12 hidden button'}>
                   {/*<div className="padding a"></div>*/}
-                  <a href="#">
+                  <a target="_blank" href="#">
                       View Full List
                   </a>
               </div>
 
             {/* Top Corporate 1 - 5 */}
-              <div className={this.state.corp ? 'col-md-6 active': 'col-md-6'}>
+              <div className={this.state.corp ? 'col-md-6 active corp l': 'col-md-6'}>
                   <ul>
                     {this.state.corps.map((corp, index) => {
                       if ( index <= 4 ) {
-                        return <li key={index}>
-                          <span>{index}</span>
-                          <a href="#">{corp.name}</a>
-                          <p><strong>$ {parseInt(corp.amountRaised).toLocaleString('en')}</strong></p>
+                        return <li key={index + 1}>
+                          <span>{index + 1}</span>
+                          <a target="_blank" href={corp.teamPageURL} >{corp.name}</a>
+                          <p><strong>${parseInt(corp.amountRaised).toLocaleString('en')}</strong></p>
                           </li>
                       }
                     })}
@@ -295,14 +301,14 @@ export default class Leaderboard extends Component {
               </div>
 
               {/* Top Corporate 6 - 10 */}
-              <div className={this.state.corp ? 'col-md-6 active': 'col-md-6'}>
+              <div className={this.state.corp ? 'col-md-6 active corp r': 'col-md-6'}>
                   <ul>
                     {this.state.corps.map((corp, index) => {
                       if ( index > 4 && index < 10 ) {
-                        return <li key={index}>
-                          <span>{index}</span>
-                          <a href="#">{corp.name}</a>
-                          <p><strong>$ {parseInt(corp.amountRaised).toLocaleString('en')}</strong></p>
+                        return <li key={index + 1}>
+                          <span>{index + 1}</span>
+                          <a target="_blank" href={corp.teamPageURL} >{corp.name}</a>
+                          <p><strong>${parseInt(corp.amountRaised).toLocaleString('en')}</strong></p>
                           </li>
                       }
                     })}
@@ -311,7 +317,7 @@ export default class Leaderboard extends Component {
 
               <div className={this.state.corp ? 'col-md-12 active button': 'col-md-12 hidden button'}>
                   {/*<div className="padding a"></div>*/}
-                  <a href="#">
+                  <a target="_blank" href="#">
                       View Full List
                   </a>
               </div>

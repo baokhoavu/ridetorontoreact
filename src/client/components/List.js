@@ -1,4 +1,4 @@
-// src/js/components/List.jsx
+// Imported Middleware
 import React from "react";
 import { connect } from "react-redux";
 

@@ -1,15 +1,19 @@
-// import '../../app.css'
+// Imported Styles
 import '../styles/Home.css';
 import '../styles/Hero.css';
+
+// Imported Components
 import React, { Component } from 'react';
 import Hero from '../components/Hero'
 import Leaderboard from '../components/Leaderboard';
 import Search from '../components/Search';
 
+// Class Components
 export default class Home extends Component {
   constructor(props) {
     super(props);
 
+    // Variables
     this.state = {
         a: true,
         b: false,
@@ -17,68 +21,96 @@ export default class Home extends Component {
         d: 0,
 
         t: null,
-        s: ['a','b','c']
+        s: ['a','b','c'],
+
+        timer: null
     }
 
+    // Bind This
     this.togglea = this.togglea.bind(this);
     this.toggleb = this.toggleb.bind(this);
     this.togglec = this.togglec.bind(this);
 
   }
 
+  // Toggle Slide A
   togglea() {
+    clearTimeout(this.state.timer)
     this.setState({ a: true })
     this.setState({ b: false })
     this.setState({ c: false })
   }
 
+  // Toggle Slide B
   toggleb() {
+    clearTimeout(this.state.timer)
+
     this.setState({ a: false })
     this.setState({ b: true })
     this.setState({ c: false })
   }
 
+  // Toggle Slide C
   togglec() {
+    clearTimeout(this.state.timer)
     this.setState({ a: false })
     this.setState({ b: false })
     this.setState({ c: true })
   }
 
-  changeSlide(slide) {
-    const slides = [
-      this.state.a,
-      this.state.b,
-      this.state.c
-    ]
+  // Auto Change Slide
+  changeSlide() {
 
-    const current = slides[slide];
+    setTimeout( () => {
+      
+      // If Slide A
+      if ( this.state.a === true ) {
+        this.setState({
+          a: false,
+          b: true
+        })
 
-    // consol
+        // Auto Every 3 Repeat
+        this.state.timer = setTimeout( () => {
+          this.changeSlide()
+        }, 3000)
 
-    const not = slides.map((v, i) => {
-      if (v[i] != current) {
-        return v
+      // If Slide B
+      } else if ( this.state.b === true ) {
+        this.setState({
+          b: false,
+          c: true
+        })
+
+        // Auto Every 3 Repeat
+        this.timer = setTimeout( () => {
+          this.changeSlide()
+        }, 3000)
+
+      // If Slide C
+      } else if ( this.state.c === true ) {
+        this.setState({
+          c: false,
+          a: true
+        })
+
+        // Auto Every 3 Repeat
+        this.timer = setTimeout( () => {
+          this.changeSlide()
+        }, 3000)
       }
-    })
 
-    // this.setState({
-      // current : true,
-      // not[0] : false,
-      // not[1] : false
-    // })
+    }, 3000)
 
-    // console.log('hi')
 
+    
   }
 
   componentDidMount() {
-    this.state.t = setTimeout( () => {
-      // console.log('hi')
-      const count = this.state.d
 
-      this.changeSlide(count + 1)
-      // changeSlide(slide + 1)
-    }, 3000);
+    // First Slide Change after 3 seconds per code
+    this.changeSlide()
+
   }
 
   render() {
@@ -89,16 +121,22 @@ export default class Home extends Component {
         {/*<Hero />*/}
         <div className="hero">
           <div className="container-fluid">
-            <div className="col-md-3 float fade"></div>
-            <div className="col-md-3 float">
+            <div className="col-md-5 float fade"></div>
+            <div className="col-md-5 float">
               <div>
                 <p className={this.state.a ? 's' : 'h'}>Help Conquer Cancer</p>
                 <p className={this.state.b ? 's' : 'h'}>2020 Ride Launch October 2</p>
                 <p className={this.state.c ? 's n' : 'h'}>We Raised over $213.2 Million in 12 Years.</p>
                 <div className="box">
-                  <a className={this.state.a ? 's' : 'h'} href="#">Register Now</a>
-                  <a className={this.state.b ? 's' : 'h'} href="#">RSVP Today</a>
-                  <a className={this.state.c ? 's' : 'h'} href="#">Learn More</a>
+                  <a className={this.state.a ? 's' : 'h'} href="https://secure.conquercancer.ca/site/TRR/Ride/Toronto2020/?pg=utype&amp;fr_id=1761">
+                    Register Now
+                  </a>
+                  <a className={this.state.b ? 's' : 'h'} href="https://ride.conquercancer.ca/toronto20/team-up-challenge/">
+                    RSVP Today
+                  </a>
+                  <a className={this.state.c ? 's' : 'h'} href="https://ride.conquercancer.ca/toronto20/about/media/">
+                    Learn More
+                  </a>
                 </div>
               </div>
               <div className="buttons">
@@ -123,25 +161,25 @@ export default class Home extends Component {
               <img height="142" width="142" src="https://ride.conquercancer.ca/toronto20/wp-content/uploads/2019/08/icon-1.png" />
               <h6>Why We Ride</h6>
               <p>Learn more about The Ride and how to make this epic experience your own.</p>
-              <a href="#">Learn More</a>
+              <a target="_blank" href="https://ride.conquercancer.ca/toronto20/about/">Learn More</a>
             </div>
             <div className="col-md-3">
-              <img height="142" width="142" src="https://ride.conquercancer.ca/toronto20/wp-content/uploads/2019/08/icon-1.png" />
-              <h6>Why We Ride</h6>
-              <p>Learn more about The Ride and how to make this epic experience your own.</p>
-              <a href="#">Learn More</a>
+              <img height="142" width="142" src="https://ride.conquercancer.ca/toronto20/wp-content/uploads/2019/08/icon-2.png" />
+              <h6>How We Support You</h6>
+              <p>We’re here to help all year. Need help training, fundraising, or learning about the amenities on event?</p>
+              <a target="_blank" href="https://ride.conquercancer.ca/toronto20/about/how-we-support-you/">Learn More</a>
             </div>
             <div className="col-md-3">
-              <img height="142" width="142" src="https://ride.conquercancer.ca/toronto20/wp-content/uploads/2019/08/icon-1.png" />
-              <h6>Why We Ride</h6>
-              <p>Learn more about The Ride and how to make this epic experience your own.</p>
-              <a href="#">Learn More</a>
+              <img height="142" width="142" src="https://ride.conquercancer.ca/toronto20/wp-content/uploads/2019/08/icon-3.png" />
+              <h6>Routes For All Abilities</h6>
+              <p>The Ride is a community of like-minded people who ride at their own pace, on routes that suit their ability.</p>
+              <a target="_blank" href="https://ride.conquercancer.ca/toronto20/about/find-your-route">Learn More</a>
             </div>
             <div className="col-md-3">
-              <img height="142" width="142" src="https://ride.conquercancer.ca/toronto20/wp-content/uploads/2019/08/icon-1.png" />
-              <h6>Why We Ride</h6>
-              <p>Learn more about The Ride and how to make this epic experience your own.</p>
-              <a href="#">Learn More</a>
+              <img height="142" width="142" src="https://ride.conquercancer.ca/toronto20/wp-content/uploads/2019/08/icon-4.png" />
+              <h6>Fundraising Resources</h6>
+              <p>New to The Ride or Peer-to-Peer Fundraising? We can help.</p>
+              <a target="_blank" href="https://ride.conquercancer.ca/toronto20/get-involved/fundraising/">Learn More</a>
             </div>
           </div>
         </div>
@@ -155,7 +193,7 @@ export default class Home extends Component {
               <h2>Now in our 13<sup>th</sup> epic year</h2>
               <p>The Enbridge® Ride to Conquer Cancer® benefiting Princess Margaret Cancer Centre is an epic Ride with an epic impact.</p>
               <p>When we ride together, cancer is no match for us!</p>
-              <a href="#">Register Now</a>
+              <a target="_blank" href="https://secure.conquercancer.ca/site/TRR/Ride/Toronto2020/?pg=utype&fr_id=1761">Register Now</a>
             </div>
           </div>
         </div>

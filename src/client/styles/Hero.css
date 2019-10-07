@@ -9,7 +9,7 @@
 }
 
 .hero {
-    background: #eee;
+
 }
 
 .hero > div {
@@ -24,10 +24,8 @@
 }
 
 .hero .float {
-	/*display: inline-block;*/
     padding: 0 25px;
-    width: 30%;
-    max-width: 380px;
+    max-width: 475px;
     min-height: 419px;
     position: absolute;
     z-index: 7;    
@@ -40,19 +38,17 @@
 }
 
 .hero .float p {
-	/*padding: 30px 0;*/
     padding-top: 75px;
-	min-height: 250px;
-	font-size: 2.25em;
+	min-height: 275px;
+	font-size: 46px;
     line-height: 1.25;
     font-family: "Futura LT Pro Heading", Helvetica, sans-serif !important;
-    /*text-align: center;*/
 }
 
 .hero .float .box {
 	/*margin: 0 auto;*/
 	width: 63%;
-	min-height: 120px;
+	min-height: 90px;
 }
 
 .hero .float .buttons {

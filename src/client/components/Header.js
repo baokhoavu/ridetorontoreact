@@ -1,10 +1,10 @@
 // Imported Components and built in React/library functionality
 import React, { Component } from 'react';
-// import About from '../pages/About';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Home from '../pages/Home';
+// import About from '../pages/About';
 // import Megamenu from './Megamenu';
 // import { connect } from 'react-redux';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 // Styles
 import '../styles/Header.css';
@@ -134,7 +134,7 @@ export default class Header extends Component {
 										<li>
 											<Link className={this.state.get ? 'over' : null } onMouseOver={this.toggleCOn} onMouseOut={this.toggleCOff} to="/q1e2/gi">Get Involved</Link>
 
-											{/* Impact Mega Menu*/}
+											{/* Get Involved Mega Menu*/}
 											<div onMouseOver={this.toggleCOn} onMouseOut={this.toggleCOff} className={this.state.get ? 'mega-menu get active': 'mega-menu get hidden'}>		
 												<div className="row">
 													<div className="col-md-1"></div>
@@ -166,8 +166,8 @@ export default class Header extends Component {
 														<a href="#">Refer and raise</a>
 														<a href="#">Workplace giving</a>
 													</div>
-													<div className="col-md-3 internal a">
-														<img src="https://ride.conquercancer.ca/toronto20/wp-content/uploads/2019/05/20007_rcto_megamenu_adcopy_conquercancer.jpg" />
+													<div className="col-md-3 internal a">														
+														<img src="https://ride.conquercancer.ca/toronto20/wp-content/uploads/2019/05/20007_rcto_megamenu_adcopy_2020volunteer.jpg" />
 													</div>
 												</div>
 											</div>
@@ -199,7 +199,7 @@ export default class Header extends Component {
 														<a href="#">Videos</a>
 													</div>
 													<div className="col-md-3 internal b">
-														<img src="https://ride.conquercancer.ca/toronto20/wp-content/uploads/2019/05/20007_rcto_megamenu_adcopy_conquercancer.jpg" />
+														<img src="https://ride.conquercancer.ca/toronto20/wp-content/uploads/2019/05/20007_rcto_megamenu_adcopy_2019thankyou.jpg" />
 													</div>
 												</div>
 											</div>
@@ -233,10 +233,8 @@ export default class Header extends Component {
 						</nav>
 					</div>
 					<Route exact path="/q1e2/" component={Home} />
-					<Route path="/q1e2/about" component={About} />
 					
 					{/*<Route exact path="/" component={Home} />*/}
-					{/*<Route path="/about" component={About} />*/}
 				</Router>
 			</div>
 		)

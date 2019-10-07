@@ -24,6 +24,7 @@
     position: relative;
     text-align: center;
     bottom: 7.5px;
+    letter-spacing: 2px;
     line-height: 2.5;
     transition: 0.4s;
     text-transform: uppercase;
@@ -43,10 +44,6 @@
 .promo div a.white:hover {
     background: #0077bc;
     color: #fff;
-}
-
-.promo div span {
-    font-size: 14px;
 }
 
 .promo div span a {

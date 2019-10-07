@@ -5,17 +5,11 @@
 .footer .container-fluid {
 	padding-left: 0 !important;
 	padding-right: 0 !important;
+	padding: 40px 0;
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin: 0 auto;
-}
-
-.container-fluid {
-	display: block;
-    padding: 40px 0;
-    margin: 0 auto;
-    max-width: 1280px;
 }
 
 .footer .container-fluid > div {
@@ -41,7 +35,7 @@ a.heavy:hover {
 	margin-top: 15px;
 }
 
-.footer .container-fluid > div > a img {
+.footer .container-fluid > div > a img.logo {
 	width: 100%;
 	margin-bottom: 25px;
 }
@@ -49,8 +43,14 @@ a.heavy:hover {
 .footer .container-fluid > div > p:nth-of-type(1) {
 	color: #ffcd00 !important;
 }
-.footer .container-fluid > div > p,
-.footer .container-fluid > div.first p,
+
+.footer .container-fluid > div > p:nth-of-type(2),
+.footer .container-fluid > div > p:nth-of-type(3) {
+	color: #fff !important;
+}
+
+/*.footer .container-fluid > div > p,*/
+/*.footer .container-fluid > div.first p,*/
 .footer .container-fluid div:nth-last-child(1),
 .footer .container-fluid > div > p span a {	
 	color: #fff !important;
@@ -58,5 +58,39 @@ a.heavy:hover {
 
 .footer .container-fluid > div > p {
 	padding-bottom: 20px;
+}
+
+.footer .socials {
+	/*margin: 0 5px 8px;*/
+	max-width: 250px;
+	margin: 0 auto;
+}
+
+.footer .socials > .row {
+	display: block;
+	width: 100%;
+}
+
+.footer .socials > .row:nth-child(2) {
+    margin-bottom: 25px;
+    margin-top: 30px;
+}
+
+.footer .socials a.foot {
+	background: #fff;
+    padding: 12px;
+    transition: all 0.2s ease-in-out;
+    margin: 0 5px;
+}
+
+.footer .socials a.foot:hover {
+	background: #ffce00;
+}
+
+.footer .socials a.foot img {
+	display: inline-block;
+	width: 100%;
+	max-width: 20px;
+	max-height: 20px;
 }
 

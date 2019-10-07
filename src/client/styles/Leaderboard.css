@@ -91,12 +91,21 @@
 	margin-bottom: 30px;
 }
 
+/*.container-fluid.board div.active.l ul li:nth-of-type(1) a {
+	left: 25px;
+}*/
+
+.container-fluid.board div.active.r ul li:nth-of-type(5) span {
+	padding: 20px 15px;
+}
+
 .container-fluid.board ul li span {
 	background: #0075c9;
-	padding: 20px 25px;
+	padding: 25px 25px 20px;
 	position: relative;
 	top: 12.5px;
 	color: #fff;
+    font-family: "Futura LT Pro Heading", Helvetica, sans-serif;
 	font-size: 30px;
 }
 
@@ -104,6 +113,8 @@
 	position: relative;
 	left: 20px;
 	top: -15px;
+	color: #0075c9;
+	text-decoration: none;
 }
 
 container-fluid.board ul li a:hover {
