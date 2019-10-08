@@ -239,9 +239,9 @@ export default class Header extends Component {
 							</div>					
 						</nav>
 					</div>
-					<Route exact path="/devReactBao/" component={Home} />
+					{/*<Route exact path="/devReactBao/" component={Home} />*/}
 					
-					{/*<Route exact path="/" component={Home} />*/}
+					<Route exact path="/" component={Home} />
 				</Router>
 			</div>
 		)

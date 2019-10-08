@@ -15,101 +15,99 @@ export default class Home extends Component {
 
     // Variables
     this.state = {
-        a: true,
-        b: false,
-        c: false,
-        d: 0,
-
-        t: null,
-        s: ['a','b','c'],
-
-        timer: null
+        // a: true,
+        // b: false,
+        // c: false,
+        // d: 0,
+        // t: null,
+        // s: ['a','b','c'],
+        // timer: null
     }
 
     // Bind This
-    this.togglea = this.togglea.bind(this);
-    this.toggleb = this.toggleb.bind(this);
-    this.togglec = this.togglec.bind(this);
+    // this.togglea = this.togglea.bind(this);
+    // this.toggleb = this.toggleb.bind(this);
+    // this.togglec = this.togglec.bind(this);
 
   }
 
   // Toggle Slide A
-  togglea() {
-    clearTimeout(this.state.timer)
-    this.setState({ a: true })
-    this.setState({ b: false })
-    this.setState({ c: false })
-  }
+  // togglea() {
+  //   clearTimeout(this.state.timer)
+  //   this.setState({ a: true })
+  //   this.setState({ b: false })
+  //   this.setState({ c: false })
+  // }
 
   // Toggle Slide B
-  toggleb() {
-    clearTimeout(this.state.timer)
+  // toggleb() {
+  //   clearTimeout(this.state.timer)
 
-    this.setState({ a: false })
-    this.setState({ b: true })
-    this.setState({ c: false })
-  }
+  //   this.setState({ a: false })
+  //   this.setState({ b: true })
+  //   this.setState({ c: false })
+  // }
 
   // Toggle Slide C
-  togglec() {
-    clearTimeout(this.state.timer)
-    this.setState({ a: false })
-    this.setState({ b: false })
-    this.setState({ c: true })
-  }
+  // togglec() {
+  //   clearTimeout(this.state.timer)
+  //   this.setState({ a: false })
+  //   this.setState({ b: false })
+  //   this.setState({ c: true })
+  // }
 
   // Auto Change Slide
-  changeSlide() {
+  // changeSlide() {
 
-    setTimeout( () => {
+  //   setTimeout( () => {
       
-      // If Slide A
-      if ( this.state.a === true ) {
-        this.setState({
-          a: false,
-          b: true
-        })
+  //     // If Slide A
+  //     if ( this.state.a === true ) {
+  //       this.setState({
+  //         a: false,
+  //         b: true
+  //       })
 
-        // Auto Every 3 Repeat
-        this.state.timer = setTimeout( () => {
-          this.changeSlide()
-        }, 3000)
+  //       // Auto Every 3 Repeat
+  //       this.state.timer = setTimeout( () => {
+  //         this.changeSlide()
+  //       }, 3000)
 
-      // If Slide B
-      } else if ( this.state.b === true ) {
-        this.setState({
-          b: false,
-          c: true
-        })
+  //     // If Slide B
+  //     } else if ( this.state.b === true ) {
+  //       this.setState({
+  //         b: false,
+  //         c: true
+  //       })
 
-        // Auto Every 3 Repeat
-        this.timer = setTimeout( () => {
-          this.changeSlide()
-        }, 3000)
+  //       // Auto Every 3 Repeat
+  //       this.timer = setTimeout( () => {
+  //         this.changeSlide()
+  //       }, 3000)
 
-      // If Slide C
-      } else if ( this.state.c === true ) {
-        this.setState({
-          c: false,
-          a: true
-        })
+  //     // If Slide C
+  //     } else if ( this.state.c === true ) {
+  //       this.setState({
+  //         c: false,
+  //         a: true
+  //       })
 
-        // Auto Every 3 Repeat
-        this.timer = setTimeout( () => {
-          this.changeSlide()
-        }, 3000)
-      }
+  //       // Auto Every 3 Repeat
+  //       this.timer = setTimeout( () => {
+  //         this.changeSlide()
+  //       }, 3000)
+  //     }
 
-    }, 3000)
+  //   }, 3000)
 
 
     
-  }
+  // }
 
   componentDidMount() {
 
     // First Slide Change after 3 seconds per code
-    this.changeSlide()
+    // this.changeSlide()
 
   }
 
@@ -119,7 +117,7 @@ export default class Home extends Component {
       <div className="body">
         
         {/*<Hero />*/}
-        <div className="hero">
+        {/*<div className="hero">
           <div className="container-fluid">
             <div className="col-md-5 float fade"></div>
             <div className="col-md-5 float">
@@ -153,7 +151,8 @@ export default class Home extends Component {
               </div>
             </div>
           </div>
-        </div>
+        </div>*/}
+        <Hero />
 
         <div className="a">
           <div className="container-fluid story">
