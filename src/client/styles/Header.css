@@ -26,6 +26,10 @@ nav .row a:hover {
 	text-decoration: underline;
 }
 
+.header nav .row button.button {
+	display: none;
+}
+
 nav .row img.logo {
 	max-width: 200px;
 }
@@ -112,4 +116,174 @@ ul.horizontal > li:nth-child(4) > a {
 
 .hidden {
 	opacity: 0;
+}
+
+.responsive-arrow {
+    display: inline-block;
+    position: absolute;
+    transform: translate(0px, -38px);
+    right: 0;
+    color: #0174cd;
+    font-size: 30px;
+}
+
+/* Hidden Width Transition Start */
+.undefined {
+	width: 0%;
+	overflow:hidden;
+}
+
+.mobile-menu .b {
+    transition: 1s;
+	z-index: 20;
+	background: #fff;
+	height: 100%;
+}
+
+.mobile-full-menu {
+    width: 100%;
+}
+
+
+/* Responsive Styles */
+
+/* Desktop */
+@media screen and (max-width: 1280px) {
+
+	/* Header Position Lowered*/
+	.header {
+		top: 95px;
+	}
+
+	/* Mobile Big Menu Lowered */
+	.mobile-full-menu {
+		position: fixed;
+		top: 23%;
+	}
+
+	/* Mobile Big Menu */
+	.mobile-full-menu a {
+		color: #000;
+	    font-family: "Futura LT Pro Heading", Helvetica, sans-serif !important;
+	}
+
+	/* Mobile */
+	.mobile-full-menu div {
+		margin: 25px 50px;
+	}
+
+	/* Hide Menu Buttons */
+	.header nav.responsive ul.horizontal li:nth-child(n+2) {
+		display: none;
+	}
+
+	/* Align Right Adjust Sign On*/
+	.header nav.responsive .col-md-6 {
+		max-width: 82% !important;
+		width: 100% !important;
+		flex: unset !important;
+	}
+
+	/* Date */
+	.header nav.responsive .date {
+		position: absolute;
+		left: 0;
+	    right: 0;
+	    margin-left: auto;
+	    margin-right: auto;
+	    text-align: center;
+	    padding-left: 0 !important;
+	}
+
+	/* Logo */
+	nav .row img.logo {
+		position: relative;
+		left: 75px;
+	}
+
+	/* Mobile Menu Button*/
+	.header nav .row button.button,
+	nav .row .responsive-menu-open {
+		display: inline-block;
+		position: absolute;
+		top: 45%;
+		left: 15%;
+	}
+
+
+	.responsive-menu-open .lines,
+	.responsive-menu-open .lines::before,
+	.responsive-menu-open .lines::after {
+		display: block;
+		content: '';
+	}
+
+	/*Mobile Top Line*/
+	.responsive-menu-open .lines.o::before {
+		top: -9px;
+		position: absolute;
+	} 
+
+	/* Mobile Bottom Line*/
+	.responsive-menu-open .lines.o::after {
+		top: 9px;
+		position: absolute;
+	}
+
+	/* Mobile Buttons */
+	.responsive-menu-open .lines, .responsive-menu-open .lines::before, .responsive-menu-open .lines::after {
+	    width: 25px;
+	    height: 3px;
+	    background-color: #000000;
+	    border-radius: 4px;
+	    transition-property: transform;
+	    transition-duration: 0.15s;
+	    transition-timing-function: ease;
+	}
+
+	/* Making the Closed Mobile Menu Button part A */
+	.responsive-menu-open .lines.c {
+		transform: rotate(-45deg);
+	}
+
+	/* Making the Closed Mobile Menu Button part B */
+	.responsive-menu-open .lines.c::after {
+		transform: rotate(-90deg);
+		position: relative;
+		top: -3px;
+	}
+
+
+}
+
+/* Tablet */
+@media screen and (max-width: 767px) {
+	
+	/* Center Logo */
+	nav .row img.logo {
+		left: 0;
+	}
+
+	/* Sign In Button Vertical */
+	.header nav.responsive > .col-md-6 {
+		position: absolute;
+		top: 30%;
+	}
+
+	/* Sign In Button Horizontal */
+	.header nav.responsive > .col-md-6 .horizontal a {
+		position: absolute;
+		text-align: right;
+		width: 28%;
+	}
+
+	/* Hide Date */
+	.header nav.responsive .date {
+		display: none;
+	}
+
+	/* Menu Button */
+	.header nav .row button.button {
+		left: 4%;
+	}
 }

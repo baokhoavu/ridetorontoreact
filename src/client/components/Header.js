@@ -27,7 +27,8 @@ export default class Header extends Component {
 	      login: false,
 	      timera: null,
 	      timerb: null,
-	      timerc: null
+	      timerc: null,
+	      tM: false
 
 	    }
 
@@ -38,7 +39,10 @@ export default class Header extends Component {
     	this.toggleBOff = this.toggleBOff.bind(this)
     	this.toggleCOn = this.toggleCOn.bind(this)
     	this.toggleCOff = this.toggleCOff.bind(this)
+    	this.toggleMobile = this.toggleMobile.bind(this)
+    	this.toggleSubMenu = this.toggleSubMenu.bind(this)
 
+    	this.test = this.test.bind(this)
 
 	}
 
@@ -57,6 +61,9 @@ export default class Header extends Component {
 		})
 	}
 
+	test = () => {
+		console.log('a')
+	}
 
 	// Impact Hover On/Off Mega Menu
   	toggleAOn = () => {
@@ -91,6 +98,31 @@ export default class Header extends Component {
 		}, 100);
 	}
 
+	// Toggle Mobile Menu
+	toggleMobile = (e) => {
+		
+		e.preventDefault();
+
+		// console.log('hi')
+		var not = this.state.tM;
+
+		this.setState({
+			tM: !not
+		})
+	}
+
+	toggleSubMenu = (event) => {
+		// event.target.querySelector('div').style.transform = "rotate(90deg)";
+		// console.log(e.target.querySelector('.responsive-arrow').style.transform = "rotate(90deg)"
+		// e.target.querySelector('.responsive-arrow').style.transform = "rotate(90deg)"
+		// const a = event.target.querySelector('div')
+		// console.log(a.innerHTML)
+		// console.log(a)
+		// console.log(event.target.querySelector('div'))
+
+		
+	}
+
 	componentDidMount() {
 
 	}
@@ -100,10 +132,17 @@ export default class Header extends Component {
 			<div >		
 				<Router>
 					<div className="header">
-						<nav>
+						<nav className="responsive">
 							<div className="row">
 								<div className="col-md-2">
 									<a href="https://secure.conquercancer.ca/devReactBao">
+										
+										<button className="button">
+											<span onClick={this.toggleMobile} className="responsive-menu-open">
+												<span className={this.state.tM ? 'lines c' : 'lines o' }>
+												</span>
+											</span>
+										</button>
 
 										{/* Logo */}
 										<img className="logo" src="https://ride.conquercancer.ca/toronto19/wp-content/uploads/2018/06/rcto_eventlogo_enbupdate_rgb.png" alt="image" />
@@ -240,6 +279,29 @@ export default class Header extends Component {
 								</div>
 							</div>					
 						</nav>
+					</div>
+					{/*<div className="mobile-full-menu">*/}
+					<div className="mobile-menu">
+						<div className={this.state.tM ? 'mobile-full-menu b' : 'undefined b'}>
+							<div>
+								<a onClick={this.test} href="#">Home</a>
+							</div>
+							<div onClick={this.toggleSubMenu}>
+								<a href="#">Impact</a>
+								<div class="responsive-arrow">›</div>
+							</div>
+							<div onClick={this.toggleSubMenu}>
+								<a href="#">About</a>
+								<div class="responsive-arrow">›</div>
+							</div>
+							<div onClick={this.toggleSubMenu}>
+								<a href="#">Get Involved</a>
+								<div class="responsive-arrow">›</div>
+							</div>
+							<div>
+								<a href="#">Get Info</a>
+							</div>
+						</div>
 					</div>
 					{/*<Route exact path="/devReactBao/" component={Home} />*/}
 					

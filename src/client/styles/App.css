@@ -300,14 +300,9 @@ img.partners {
 .body div:nth-child(3) div:nth-child(2) .container div:nth-child(2) {
 	background: #333;
 }
-/*
-.body div:nth-of-type(4) {
-	padding: 40px 0;
-}*/
 
 .body div:nth-of-type(4) div {
 	display: inline-block;
-	/*width: 100%;*/
 	text-align: center;
 	padding-bottom: 0;
 }
@@ -330,3 +325,28 @@ img.partners {
 .body div:nth-of-type(4) div:nth-child(2) .container div:nth-child(4) {
 	border: 2px solid #000;
 }
+
+/* Responsive Styles */
+@media screen and (max-width: 1280px) {
+	
+	/* Promo Bar Phrase */
+	.promo .responsive span {
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+
+	/* Promo Bar Button Row */
+	.promo .responsive .buttons {
+		max-width: 486px;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	/* Promo Bar Buttons */
+	.promo .responsive .buttons a {
+		bottom: -2.5px;
+	}		
+
+}
+

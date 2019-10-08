@@ -8,22 +8,23 @@
     z-index: 10;
 }
 
-.promo div {
+.promo .responsive {
     max-width: 1280px;
     margin: 0 auto;
     display: block;
 }
 
-.promo div > a {
+.promo .buttons > a {
 	color: #fff;
     border: 2px solid #fff;
     float: right;
-    margin-left: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
     width: 233px;
     height: 40px;
     position: relative;
     text-align: center;
-    bottom: 7.5px;
+    bottom: 32.5px;
     letter-spacing: 2px;
     line-height: 2.5;
     transition: 0.4s;
@@ -31,27 +32,27 @@
     text-decoration: none;
 }
 
-.promo div> a:hover {
+.promo .buttons> a:hover {
     background: #fff;
     color: #0077bc;
 }
 
-.promo div a.white {
+.promo .buttons a.white {
     background: #fff;
     color: #0077bc;
 }
 
-.promo div a.white:hover {
+.promo .buttons a.white:hover {
     background: #0077bc;
     color: #fff;
 }
 
-.promo div span a {
+.promo .responsive span a {
     float: unset;
     color: #fff;
     text-decoration: underline;
     text-transform: uppercase;
 }
-.promo div span a:hover {
+.promo .responsive span a:hover {
     color: #eff;
 }
