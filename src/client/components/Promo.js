@@ -1,6 +1,10 @@
+// Promo
+
+// Imported Middleware and STyles
 import React from 'react';
 import '../styles/Promo.css';
 
+// Function Based Component declared as Promo
 const Promo = () => (
 	<div className="promo">		
 		<div>
@@ -12,4 +16,5 @@ const Promo = () => (
 
 )
 
+// Exporting
 export default Promo;

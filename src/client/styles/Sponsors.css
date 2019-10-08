@@ -21,3 +21,32 @@
 	position: relative;
 	bottom: 25px;
 }
+
+.partner .col-md-3 {
+	display: inline-block;
+}
+
+.partner .col-md-3 > p {
+	text-align: center;
+	font-family: "Futura LT Pro Body", Helvetica, sans-serif !important;
+	text-transform: uppercase;
+	color: #707070;
+}
+
+img.partners {
+	width: 100%;
+}
+
+.partner div.col-md-12 {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.partner div.col-md-12:nth-child(2) {
+	padding-top: 40px;
+}
+
+.partner .col-md-12 h2 {
+	text-align: center;
+	text-transform: uppercase;
+}

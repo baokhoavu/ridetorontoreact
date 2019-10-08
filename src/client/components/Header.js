@@ -1,3 +1,5 @@
+// Footer
+
 // Imported Components and built in React/library functionality
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";

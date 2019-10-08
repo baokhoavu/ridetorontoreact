@@ -1,3 +1,6 @@
+// Hero
+
+// Imported Styles and Middleware
 import  React, { Component } from 'react';
 import '../styles/Home.css';
 import '../styles/Hero.css';
@@ -141,44 +144,3 @@ export default class Hero extends Component {
 	}
 
 }
-
-// const Hero = () => (
-// 	<div className="hero">
-// 	  <div className="container-fluid">
-// 	    <div className="col-md-5 float fade"></div>
-// 	    <div className="col-md-5 float">
-// 	      <div>
-// 	        <p className={this.state.a ? 's' : 'h'}>Help Conquer Cancer</p>
-// 	        <p className={this.state.b ? 's' : 'h'}>2020 Ride Launch October 2</p>
-// 	        <p className={this.state.c ? 's n' : 'h'}>We Raised over $213.2 Million in 12 Years.</p>
-// 	        <div className="box">
-// 	          <a className={this.state.a ? 's' : 'h'} href="https://secure.conquercancer.ca/site/TRR/Ride/Toronto2020/?pg=utype&amp;fr_id=1761">
-// 	            Register Now
-// 	          </a>
-// 	          <a className={this.state.b ? 's' : 'h'} href="https://ride.conquercancer.ca/toronto20/team-up-challenge/">
-// 	            RSVP Today
-// 	          </a>
-// 	          <a className={this.state.c ? 's' : 'h'} href="https://ride.conquercancer.ca/toronto20/about/media/">
-// 	            Learn More
-// 	          </a>
-// 	        </div>
-// 	      </div>
-// 	      <div className="buttons">
-// 	        <button className={this.state.a ? 'active' : 'not'} onClick={this.togglea}></button>
-// 	        <button className={this.state.b ? 'active' : 'not'} onClick={this.toggleb}></button>
-// 	        <button className={this.state.c ? 'active' : 'not'} onClick={this.togglec}></button>
-// 	      </div>
-// 	    </div>
-// 	    <div className="col-md-12">
-// 	      <div className="img">
-// 	        <img className={this.state.a ? 'active a' : 'not'} />
-// 	        <img className={this.state.b ? 'active b' : 'not'} />
-// 	        <img className={this.state.c ? 'active c' : 'not'} />
-// 	      </div>
-// 	    </div>
-// 	  </div>
-// 	</div>
-
-// )
-
-// export default Hero;

@@ -1,6 +1,10 @@
+// Header
+
+// Imported Styles and Middleware
 import React, { Component } from 'react';
 import '../styles/Megamenu.css';
 
+// Class Component declared as Header
 export default class Header extends Component {
 	constructor(props) {
 	    super(props);

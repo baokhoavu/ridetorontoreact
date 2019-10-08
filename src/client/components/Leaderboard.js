@@ -1,3 +1,5 @@
+// Leaderboard
+
 // Imported Styles
 import '../styles/Leaderboard.css';
 import '../styles/Home.css';

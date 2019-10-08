@@ -1,3 +1,5 @@
+// Search
+
 // Imported Styles and Middleware
 import '../styles/Search.css';
 import React, { Component } from 'react';
