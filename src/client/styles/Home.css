@@ -1,10 +1,95 @@
-/*p.s.n {
-	font-size: 2.5em !important;
-}
+/* Home */
 
-*/
-
+/* Superscript */
 .b .half sup {
 	top: -0.35em !important;
 	font-size: 60% !important;
+}
+
+@media screen and (max-width: 1280px) {
+	
+	/* Side Responsive */
+	.b .container-fluid.half div:nth-child(2) {
+		padding-right: unset;
+	}
+}
+
+@media screen and (max-width: 1140px) {
+	
+	/* Side Responsive */
+	.b .container-fluid.half > .col-md-6 {
+		padding-left: 25px;
+	}
+	
+	.container-fluid.half div:nth-child(2) a {
+		bottom: -25px;
+	}
+
+	.b .container-fluid div img {
+		width: 90%;
+		height: auto;
+	}
+	.b .container-fluid.half div:nth-child(2) {
+		bottom: 30px !important;
+	}
+	.container-fluid.half div:nth-child(2) a {
+		bottom: -12.5px !important;
+	}
+
+	/* Remove Set Height Limitation from Desktop*/
+	.body div.b {
+		min-height: unset !important;
+	}
+
+	/* Top Padding */
+	.body > .b > .container-fluid.half {
+		padding-top: 50px !important;
+	}
+
+	/* Side Padding for Copy of Navy Row*/
+	.body .container-fluid.story {
+		padding: 40px 10px;
+	}
+
+	/* Navy Row Button Bottom Margin */
+	.container-fluid.half div:nth-child(2) a {
+		margin-bottom: 30px;
+	}
+
+	/* Add Side Padding to Leaderboard */
+	div.d.search > .container-fluid,
+	.leaderboard div.c div {
+		width: 97% !important;
+	}
+}
+
+
+@media screen and (max-width: 940px) {
+	
+	/* Navy Row Mobile Responsive */
+	.b .container-fluid.half > .col-md-6 {
+		margin: 0 auto;
+		max-width: 100%;
+		width: 100%;
+		display: block;
+	}
+
+	/* Navy Row Height */
+	.body div.b {
+		min-height: 500px;
+	}
+
+	/* Navy Row Copy */
+	.b .container-fluid.half div:nth-child(2) {
+		bottom: unset;
+		top: 25px;
+		padding-right: 25px;
+		padding-left: 25px;
+	}
+
+	/* Navy Row Button */
+	.container-fluid.half div:nth-child(2) a {
+		bottom: 0;
+		margin: 15px auto;
+	}
 }

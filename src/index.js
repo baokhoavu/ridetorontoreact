@@ -11,21 +11,22 @@ import { Provider } from "react-redux";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // const store = createStore();
-const rootEl = document.getElementById('root');
+// const rootEl = document.getElementById('root');
 
-ReactDOM.render((
-	<Provider store={store}>
-		<App />
-	</Provider>
-), rootEl );
+// ReactDOM.render((
+// 	<Provider store={store}>
+// 		<App />
+// 	</Provider>
+// ), rootEl );
 
-// render(
-//   <Provider store={store}>
-//     <App />
-//   </Provider>,
-//   // The target element might be either root or app,
-//   // depending on your development environment
-//   // document.getElementById("app")
-//   document.getElementById("root")
-// );
-// ReactDOM.render(<App />, document.getElementById('root'));
+render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  // The target element might be either root or app,
+  // depending on your development environment
+  // document.getElementById("app")
+  document.getElementById("root")
+);
+ReactDOM.render(<App />, document.getElementById('root'));
+

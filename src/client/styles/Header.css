@@ -12,6 +12,11 @@ nav {
 	margin: 0 auto;
 }
 
+.header nav .row .col-md-2 a {
+	width: 200px;
+	margin-left: 100px;
+}
+
 nav .row a {
 	display: block;
 	max-width: 200px;
@@ -64,8 +69,9 @@ ul.horizontal > li:nth-child(4) > a {
 	letter-spacing: 2px;
 }
 
+/* Center Date */
 .col-md-4.date {
-	padding-left: 70px !important;
+	text-align: center;
 }
 
 .col-md-4.right {
@@ -114,25 +120,73 @@ ul.horizontal > li:nth-child(4) > a {
 	opacity: 1;
 }
 
+/* Menu Hide */
 .hidden {
 	opacity: 0;
 }
 
+/* Mega Menu Sub Container Slide Vertical Transition Using Height */
+.col-md-12.c {
+	max-height: 0;
+    transition: max-height 0.15s ease-out;
+    overflow: hidden;
+}
+
+
+/* Mega Menu Sub Menu Container Top/Bottom Padding Spacing */
+.col-md-12.o {
+/*	height: 100%;*/
+    /*max-height: 500px;*/
+    transition: max-height 0.25s ease-in;
+    padding-top: 16px;
+    padding-bottom: 17px;
+    padding-right: 0;
+
+}
+
+.sub.plus.col-md-12.o {
+	padding-top: 0;
+}
+
+/* Mega Menu Sub Menu Arrows */
+.sub > div > .responsive-arrow {
+	bottom: 0;
+	top: 10px;
+	position: relative;
+}
+
+/* Mobile Menu Arrows */
 .responsive-arrow {
     display: inline-block;
-    position: absolute;
-    transform: translate(0px, -38px);
-    right: 0;
+    float: right;
     color: #0174cd;
     font-size: 30px;
+    bottom: 13px;
+    position: relative;
+    transition: 0.5s;
+    text-align: center;
+    border-radius: 20px;
+    height: 40px;
+    width: 40px;
+    background: #fff;
 }
 
-/* Hidden Width Transition Start */
-.undefined {
-	width: 0%;
-	overflow:hidden;
+/* Mobile Menu Arrow Button On Click */
+.responsive-arrow.open {
+    transform: rotate(180deg);
+    color: #fff;
+    background: #0174cd;
+    border-radius: 20px;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 1.125;
+    position: relative;
+    top: 0;
 }
 
+
+/* Mobile Menu Responsiveness */
 .mobile-menu .b {
     transition: 1s;
 	z-index: 20;
@@ -140,8 +194,18 @@ ul.horizontal > li:nth-child(4) > a {
 	height: 100%;
 }
 
-.mobile-full-menu {
+/* Full Width Mobile Menu */
+.mobile-full-menu.ho {
     width: 100%;
+}
+
+/* Collapseable Mobile Menu */
+.mobile-full-menu.hu {
+	width: 100%;
+	transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
 }
 
 
@@ -158,30 +222,75 @@ ul.horizontal > li:nth-child(4) > a {
 	/* Mobile Big Menu Lowered */
 	.mobile-full-menu {
 		position: fixed;
-		top: 23%;
+		top: 209px;
 	}
 
 	/* Mobile Big Menu */
 	.mobile-full-menu a {
 		color: #000;
 	    font-family: "Futura LT Pro Heading", Helvetica, sans-serif !important;
+	    position: relative;
+	    top: 10px;
+	    font-size: 13px;
+	    text-transform: uppercase;
+	}
+
+	/* Font For Non Header Fonts*/
+	.sub.plus div a,
+	.mobile-menu .mobile-full-menu .imp.col-md-12 a {
+		font-family: "Futura LT Pro Body", Helvetica, sans-serif !important;
 	}
 
 	/* Mobile */
-	.mobile-full-menu div {
-		margin: 25px 50px;
+	.mobile-full-menu > div {
+		margin: 2.5px 5%;
+	    min-height: 40px;
 	}
+
+	/* Mobile Menu Sub Menu's */
+	.mobile-full-menu > div > .col-md-12 > div {
+		height: 50px;
+    	line-height: 50px;
+	}
+
+	/* Height of Opened Ride Sub Plus Menu */
+	.mobile-full-menu > div > .col-md-12 > div.rid.open {
+		height: 310px;
+	}
+
+	/* Open Up Ride Sub Plus Menu */
+	.mobile-full-menu > div > .col-md-12 > div.rid.null {
+		height: 50px;
+	}
+
+	/* Height of Opened Partner Sub Plus Menu */
+	.mobile-full-menu > div > .col-md-12 > div.par.open {
+		height: 310px;
+	}
+
+	/* Open Up Partner Sub Plus Menu */
+	.mobile-full-menu > div > .col-md-12 > div.par.null {
+		height: 50px;
+	}
+
 
 	/* Hide Menu Buttons */
 	.header nav.responsive ul.horizontal li:nth-child(n+2) {
 		display: none;
 	}
 
+	.header nav.responsive .col-md-2 {
+		position: relative;
+		z-index: 100
+	}
+
 	/* Align Right Adjust Sign On*/
 	.header nav.responsive .col-md-6 {
-		max-width: 82% !important;
+		max-width: 80% !important;
 		width: 100% !important;
 		flex: unset !important;
+		position: relative;
+		z-index: 95;
 	}
 
 	/* Date */
@@ -195,10 +304,10 @@ ul.horizontal > li:nth-child(4) > a {
 	    padding-left: 0 !important;
 	}
 
-	/* Logo */
-	nav .row img.logo {
-		position: relative;
-		left: 75px;
+	/* Responsive Log In Box */
+	.loginShow.col-md-4.right {
+		width: 220px;
+		right: 0;
 	}
 
 	/* Mobile Menu Button*/
@@ -207,10 +316,11 @@ ul.horizontal > li:nth-child(4) > a {
 		display: inline-block;
 		position: absolute;
 		top: 45%;
-		left: 15%;
+		/*left: 15%;*/
+		left: 35px;
 	}
 
-
+	/* Three Lines */
 	.responsive-menu-open .lines,
 	.responsive-menu-open .lines::before,
 	.responsive-menu-open .lines::after {
@@ -253,25 +363,31 @@ ul.horizontal > li:nth-child(4) > a {
 		top: -3px;
 	}
 
-
 }
 
 /* Tablet */
 @media screen and (max-width: 767px) {
 	
+	.loginShow {
+		height: 160px;
+		width: 220px !important;
+		right: -28%;
+		top: 45px;
+	}
+
 	/* Center Logo */
 	nav .row img.logo {
 		left: 0;
 	}
 
 	/* Sign In Button Vertical */
-	.header nav.responsive > .col-md-6 {
+	.header nav.responsive > .row > .col-md-6 {
 		position: absolute;
 		top: 30%;
 	}
 
 	/* Sign In Button Horizontal */
-	.header nav.responsive > .col-md-6 .horizontal a {
+	.header nav.responsive .col-md-6 .horizontal li:nth-of-type(1) a.heavy {
 		position: absolute;
 		text-align: right;
 		width: 28%;

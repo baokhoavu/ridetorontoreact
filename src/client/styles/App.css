@@ -116,7 +116,7 @@ body {
 
 .body {
 	z-index: 5;
-	padding-top: 170px;
+	/*padding-top: 170px;*/
 }
 
 .body div.b,
@@ -131,9 +131,12 @@ body {
 .body div.e {
 	background: #0075c9;
 }
-.e .container-fluid.half div img,
+.e .container-fluid.half div img {
+	display: block;
+}
 .b .container-fluid div img {
 	display: block;
+	width: 100%;
 }
 
 .e .container-fluid.half div img {
@@ -346,7 +349,12 @@ img.partners {
 	/* Promo Bar Buttons */
 	.promo .responsive .buttons a {
 		bottom: -2.5px;
-	}		
+	}
+
+	/* Center Navy Row Image during Media Breakpoints */
+	.b .container-fluid div img {
+		margin: 0 auto;
+	}
 
 }
 

@@ -150,16 +150,16 @@ export default class Leaderboard extends Component {
 
           <div>
             <div className="container-fluid leader">
-              <div className={this.state.team ? 'col-md-3 active': 'col-md-3'}>
+              <div className={'col-md-3' + ' ' + (this.state.team ? 'active': null)}>
                 <a onClick={this.onChangeA} href="#">Top Teams</a>
               </div>
-              <div className={this.state.indi ? 'col-md-3 active': 'col-md-3'}>
+              <div className={'col-md-3' + ' ' + (this.state.indi ? 'active': null)}>
                 <a onClick={this.onChangeB} href="#">Top Individuals</a>
               </div>
-              <div className={this.state.comm ? 'col-md-3 active': 'col-md-3'}>
+              <div className={'col-md-3' + ' ' + (this.state.comm ? 'active': null)}>
                 <a onClick={this.onChangeC} href="#">Top Corporate</a>
               </div>
-              <div className={this.state.corp ? 'col-md-3 active': 'col-md-3'}>
+              <div className={'col-md-3' + ' ' + (this.state.corp ? 'active': null)}>
                 <a onClick={this.onChangeD} href="#">Top Community</a>
               </div>
             </div>
@@ -169,7 +169,7 @@ export default class Leaderboard extends Component {
             <div className="container-fluid board">
 
               {/* Top Teams 1 - 5 */}
-              <div className={this.state.team ? 'col-md-6 active l': 'col-md-6'}>
+              <div className={this.state.team ? 'col-md-5 active l': 'col-md-5'}>
                   <ul>
                     {this.state.teams.map((team, index) => {
                       if ( index <= 4 ) {
@@ -185,7 +185,7 @@ export default class Leaderboard extends Component {
               </div>
 
               {/* Top Teams 6 - 10 */}
-              <div className={this.state.team ? 'col-md-6 active r': 'col-md-6'}>
+              <div className={this.state.team ? 'col-md-5 active r': 'col-md-5'}>
                   <ul>
                     {this.state.teams.map((team, index) => {
                       if ( index > 4 && index < 10 ) {
@@ -201,14 +201,13 @@ export default class Leaderboard extends Component {
               </div>
 
               <div className={this.state.team ? 'col-md-12 active button': 'col-md-12 hidden button'}>
-                  {/*<div className="padding a"></div>*/}
                   <a target="_blank" href="#">
                       View Full List
                   </a>
               </div>
 
               {/* Top Individuals 1 - 5 */}
-              <div className={this.state.indi ? 'col-md-6 active l': 'col-md-6'}>
+              <div className={this.state.indi ? 'col-md-5 active l': 'col-md-5'}>
                   <ul>
                     {this.state.indis.map((indi, index) => {
                       if ( index <= 4 ) {
@@ -225,7 +224,7 @@ export default class Leaderboard extends Component {
               </div>
 
               {/* Top Individuals 6 - 10 */}
-              <div className={this.state.indi ? 'col-md-6 active r': 'col-md-6'}>
+              <div className={this.state.indi ? 'col-md-5 active r': 'col-md-5'}>
                   <ul>
                     {this.state.indis.map((indi, index) => {
                       if ( index > 4 && index < 10 ) {
@@ -249,7 +248,7 @@ export default class Leaderboard extends Component {
               </div>
 
               {/* Top Community 1 - 5 */}
-              <div className={this.state.comm ? 'col-md-6 active comm l': 'col-md-6 comm'}>
+              <div className={this.state.comm ? 'col-md-5 active comm l': 'col-md-5 comm'}>
                   <ul>
                     {
                       this.state.comms.map((comm, index) => {
@@ -266,7 +265,7 @@ export default class Leaderboard extends Component {
               </div>
 
               {/* Top Community 6 - 10 */}
-              <div className={this.state.comm ? 'col-md-6 active comm r': 'col-md-6 comm'}>
+              <div className={this.state.comm ? 'col-md-5 active comm r': 'col-md-5 comm'}>
                   <ul>
                     {this.state.comms.map((comm, index) => {
                       if ( index > 4 && index < 10 ) {
@@ -288,7 +287,7 @@ export default class Leaderboard extends Component {
               </div>
 
             {/* Top Corporate 1 - 5 */}
-              <div className={this.state.corp ? 'col-md-6 active corp l': 'col-md-6'}>
+              <div className={this.state.corp ? 'col-md-5 active corp l': 'col-md-5'}>
                   <ul>
                     {this.state.corps.map((corp, index) => {
                       if ( index <= 4 ) {
@@ -303,7 +302,7 @@ export default class Leaderboard extends Component {
               </div>
 
               {/* Top Corporate 6 - 10 */}
-              <div className={this.state.corp ? 'col-md-6 active corp r': 'col-md-6'}>
+              <div className={this.state.corp ? 'col-md-5 active corp r': 'col-md-5'}>
                   <ul>
                     {this.state.corps.map((corp, index) => {
                       if ( index > 4 && index < 10 ) {

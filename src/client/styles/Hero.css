@@ -164,3 +164,19 @@ img.not,
         min-height: unset;
     }
 }
+
+@media screen and (max-width: 960px) {
+    .hero .img img {
+        min-height: 275px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero .img img {
+        min-height: 275px;
+    }
+    .hero .float p {
+        padding-top: 50px;
+        font-size: 42px;
+    }
+}
