@@ -241,7 +241,6 @@ export default class Leaderboard extends Component {
               </div>
 
               <div className={this.state.indi ? 'col-md-12 active button': 'col-md-12 hidden button'}>
-                  {/*<div className="padding a"></div>*/}
                   <a target="_blank" href="#">
                       View Full List
                   </a>
@@ -280,7 +279,6 @@ export default class Leaderboard extends Component {
               </div>
 
               <div className={this.state.comm ? 'col-md-12 active button': 'col-md-12 hidden button'}>
-                  {/*<div className="padding a"></div>*/}
                   <a target="_blank" href="#">
                       View Full List
                   </a>
@@ -317,7 +315,6 @@ export default class Leaderboard extends Component {
               </div>
 
               <div className={this.state.corp ? 'col-md-12 active button': 'col-md-12 hidden button'}>
-                  {/*<div className="padding a"></div>*/}
                   <a target="_blank" href="#">
                       View Full List
                   </a>

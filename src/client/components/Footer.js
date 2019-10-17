@@ -14,7 +14,7 @@ import React from 'react';
 // Function based Component called Footer
 const Footer = () => (
     <div className="footer">		
-		<div className="container-fluid row">
+		<div className="container-fluid row cfont">
 
 			{/* First/Logo Column starting from Left to Right */}
 			<div className="col-md-3 first">
@@ -25,27 +25,33 @@ const Footer = () => (
 				</a>
 
 				{/* Date*/}
-				<p>
+				<p className="hfont">
 					[877] 699-BIKE [2453]
+					<br />
 					JUNE 13-14, 2020
 				</p>
 
 			    {/* Address */}
 				<p>
-					<strong>Address:</strong>
+					<strong className="hfont">Address:</strong>
 					<br />
 					110 Eglinton Ave East,
+					<br />
 					Suite 603,
+					<br />
 					Toronto, ON M4P 2Y1
 				</p>
 
 			    {/* Time */}
 				<p>
-					<strong>Hours:</strong>
+					<strong className="hfont">Hours:</strong>
 					<br />
 					Monday - Friday:
+					<br />
 					9:00 a.m. - 5:30 p.m.
 				</p>
+
+				<img className="img" src="https://ride.conquercancer.ca/toronto20/wp-content/uploads/2019/06/enbridge-withtitle1.png" alt="Enbridge logo" />
 
 			</div>
 
@@ -54,6 +60,7 @@ const Footer = () => (
 
 				{/* First */}
 				<p>
+					{/* Internal WP Links */}
 					<span className="heavy"><strong><a href="https://ride.conquercancer.ca/toronto20/impact/dollars-at-work/">Dollars at work</a></strong></span>
 					<br />
 					<span className="heavy"><strong><a href="https://ride.conquercancer.ca/toronto20/impact/about-cancer/">Cancer In Canada</a></strong></span>
@@ -65,6 +72,8 @@ const Footer = () => (
 				<p>
 					<span className="heavy"><strong><a>Ride</a></strong></span>
 					<br />
+
+					{/* Internal WP Link */}
 					<span><a href="https://ride.conquercancer.ca/toronto20/about/">About the ride</a></span>
 					<br />
 					<span><a href="https://ride.conquercancer.ca/toronto20/about/find-your-route/">Find Your Route</a></span>
@@ -78,6 +87,8 @@ const Footer = () => (
 
 				{/*Third*/}
 	            <p>
+
+	            	{/* Internal WP Link */}
 					<span className="heavy"><strong><a href="https://ride.conquercancer.ca/toronto20/about/partners/">Partners</a></strong></span>
 					<br />
 					<span><a href="https://ride.conquercancer.ca/toronto20/about/partners/">Our Partners</a></span>
@@ -91,6 +102,8 @@ const Footer = () => (
 				
 	        	{/* First */}
 				<p>
+
+					{/* Internal WP Link */}
 					<span className="heavy"><strong><a href="https://ride.conquercancer.ca/toronto20/about/media/">News</a></strong></span>
 					<br />
 					<span className="heavy"><strong><a href="http://www.pmcfphotos.ca/therideto">Photos</a></strong></span>
@@ -102,6 +115,8 @@ const Footer = () => (
 				<p>
 					<span className="heavy"><strong><a>Riders</a></strong></span>
 					<br />
+
+					{/* Internal WP Link */}
 					<span><a href="https://secure.conquercancer.ca/site/SPageNavigator/to20_top_fundraisers">Top Fundraisers</a></span>
 					<br />
 					<span><a href="https://secure.conquercancer.ca/site/SPageNavigator/to20_ambassador">Ambassadors</a></span>
@@ -117,6 +132,8 @@ const Footer = () => (
 	            <p>
 					<span className="heavy"><strong><a>Teams</a></strong></span>
 					<br />
+
+				{/* Internal LO Link */}
 					<span><a href="https://secure.conquercancer.ca/site/SPageNavigator/to20_top_teams">Top Teams</a></span>
 					<br />
 					<span><a href="https://ride.conquercancer.ca/toronto20/get-involved/ride-as-a-team/">Ride As A Team</a></span>
@@ -134,6 +151,8 @@ const Footer = () => (
 	            <p>
 					<span className="heavy"><strong><a>Crew & Volunteer</a></strong></span>
 					<br />
+
+					{/* Internal WP Link */}
 					<span><a href="https://ride.conquercancer.ca/toronto20/get-involved/crew-and-volunteer/">How You Can Help</a></span>
 					<br />
 					<span><a href="https://ride.conquercancer.ca/toronto20/get-involved/important-info/">Important Info</a></span>
@@ -147,6 +166,8 @@ const Footer = () => (
 	            <p>
 					<span className="heavy"><strong><a>Fundraising</a></strong></span>
 					<br />
+
+					{/* Internal WP Link */}
 					<span><a href="https://ride.conquercancer.ca/toronto20/get-involved/fundraising/">Toolkit</a></span>
 					<br />
 					<span><a href="https://ride.conquercancer.ca/toronto20/fundraising/refer-and-raise/">Refer and Raise</a></span>
@@ -158,6 +179,8 @@ const Footer = () => (
 
 				{/*Third*/}
 				<p>
+
+					{/* Internal WP Link */}
 					<span className="heavy"><strong><a href="https://ride.conquercancer.ca/toronto20/faqs/">Faqs</a></strong></span>
 					<br />
 					<span className="heavy"><strong><a href="https://ride.conquercancer.ca/toronto20/privacy-policy/">Privacy Policy</a></strong></span>
@@ -187,6 +210,8 @@ const Footer = () => (
 			        	</a>
 	        		</div>
 	        	</div>
+
+	        {/* Copyright */}
 	        	© 2019 CauseForce, LLC. The Ride to Conquer Cancer and Princess Margaret Cancer Centre names and logos are registered trademarks of The Princess Margaret Cancer Foundation, used under license. Enbridge is a registered trademark of Enbridge, Inc., used under license.
 	        </div>
 		</div>

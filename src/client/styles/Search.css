@@ -1,23 +1,9 @@
-@font-face {
-    font-family: "Futura LT Pro Heading";
-    src: url(../fonts/FuturaLTPro-Bold.otf);
-}
-
-@font-face {
-    font-family: "Futura LT Pro Body";
-    src: url(../fonts/FuturaLTPro-Book.otf);
-}
-
 div.d.search {
 	padding: 40px 0;
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
 }
-
-/*div.d.search > .container-fluid {
-
-}*/
 
 div.d.search ul {
     padding-left: 0;

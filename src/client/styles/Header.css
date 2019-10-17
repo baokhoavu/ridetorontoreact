@@ -128,7 +128,7 @@ ul.horizontal > li:nth-child(4) > a {
 /* Mega Menu Sub Container Slide Vertical Transition Using Height */
 .col-md-12.c {
 	max-height: 0;
-    transition: max-height 0.15s ease-out;
+    transition: max-height 0.4s ease-out;
     overflow: hidden;
 }
 
@@ -136,8 +136,8 @@ ul.horizontal > li:nth-child(4) > a {
 /* Mega Menu Sub Menu Container Top/Bottom Padding Spacing */
 .col-md-12.o {
 /*	height: 100%;*/
-    /*max-height: 500px;*/
-    transition: max-height 0.25s ease-in;
+    max-height: 500px;
+    transition: max-height 0.4s ease-in;
     padding-top: 16px;
     padding-bottom: 17px;
     padding-right: 0;
@@ -251,28 +251,40 @@ ul.horizontal > li:nth-child(4) > a {
 	.mobile-full-menu > div > .col-md-12 > div {
 		height: 50px;
     	line-height: 50px;
+    	transition: 0.4s;
 	}
 
 	/* Height of Opened Ride Sub Plus Menu */
-	.mobile-full-menu > div > .col-md-12 > div.rid.open {
-		height: 310px;
+	.mobile-full-menu > div > .col-md-12 > div.rid.open,
+
+	/* Height of Opened Partner Sub Plus Menu */
+	.mobile-full-menu > div > .col-md-12 > div.par.open,
+
+	/* Height of Opened Partner Sub Plus Menu */
+	.mobile-full-menu > div > .col-md-12 > div.rds.open,
+
+	/* Height of Opened Teams Sub Plus Menu */
+	.mobile-full-menu > div > .col-md-12 > div.tea.open {
+		height: 310px
+	}
+
+	/* Height of Opened Crew Sub Plus Menu */
+	.mobile-full-menu > div > .col-md-12 > div.cre.open {
+		height: 260px;
 	}
 
 	/* Open Up Ride Sub Plus Menu */
-	.mobile-full-menu > div > .col-md-12 > div.rid.null {
+	.mobile-full-menu > div > .col-md-12 > div.null {
 		height: 50px;
 	}
 
 	/* Height of Opened Partner Sub Plus Menu */
-	.mobile-full-menu > div > .col-md-12 > div.par.open {
-		height: 310px;
-	}
+	.mobile-full-menu > div > .col-md-12 > div.new.open,
 
-	/* Open Up Partner Sub Plus Menu */
-	.mobile-full-menu > div > .col-md-12 > div.par.null {
-		height: 50px;
+	/* Height of Opened Fundraising Sub Plus Menu */
+	.mobile-full-menu > div > .col-md-12 > div.fun.open {
+		height: 150px;
 	}
-
 
 	/* Hide Menu Buttons */
 	.header nav.responsive ul.horizontal li:nth-child(n+2) {
@@ -368,11 +380,17 @@ ul.horizontal > li:nth-child(4) > a {
 /* Tablet */
 @media screen and (max-width: 767px) {
 	
+	/* Responsive Login Box */
 	.loginShow {
 		height: 160px;
 		width: 220px !important;
 		right: -28%;
 		top: 45px;
+	}
+
+	/* Center Logo on Tablet */
+	.header nav .row .col-md-2 a {
+		margin-left: auto;
 	}
 
 	/* Center Logo */
@@ -401,5 +419,17 @@ ul.horizontal > li:nth-child(4) > a {
 	/* Menu Button */
 	.header nav .row button.button {
 		left: 4%;
+	}
+}
+
+/* Mobile */
+@media screen and (max-width: 400px) {
+	nav .row img.logo {
+    	max-width: 150px;
+    	position: relative;
+    	top: 5px;
+	}
+	.header nav .row .col-md-2 a {
+		width: 150px;
 	}
 }

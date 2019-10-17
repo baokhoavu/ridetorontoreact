@@ -1,13 +1,4 @@
-@font-face {
-    font-family: "Futura LT Pro Heading";
-    src: url(../fonts/FuturaLTPro-Bold.otf);
-}
-
-@font-face {
-    font-family: "Futura LT Pro Body";
-    src: url(../fonts/FuturaLTPro-Book.otf);
-}
-
+/* Hero Container*/
 .hero > div {
     width: 100%;
     padding-left: 0;
@@ -19,6 +10,7 @@
     margin-right: auto;
 }
 
+/* Hero Floating Navy Left Aligned Box */
 .hero .float {
     padding: 0 25px;
     max-width: 475px;
@@ -28,11 +20,13 @@
     color: #fff;
 }
 
+/* Adding Opacity to overlay */
 .hero .float.fade {
     background: #003E6A;
     opacity: .8;
 }
 
+/* Style Text for Floating Navy*/
 .hero .float p {
     padding-top: 75px;
 	min-height: 275px;
@@ -41,15 +35,18 @@
     font-family: "Futura LT Pro Heading", Helvetica, sans-serif !important;
 }
 
+/* Adjust container for Floating Navy */
 .hero .float .box {
 	width: 63%;
 	min-height: 90px;
 }
 
+/* Adjust button within Floating Navy Container*/
 .hero .float .buttons {
 	width: 60px;
 }
 
+/* Adjust Button Copy Styling for floating Navy */
 .hero .float div a {
 	border: 2px solid #003E6A;
     background: #fff;
@@ -70,11 +67,13 @@
     bottom: 0;
 }
 
+/* On Hover effects for Button in Navy Floating */
 .hero .float div a:hover {
 	background: #003E6A;
 	color: #fff;
 }
 
+/* Style Slider Button Styles within Navy Floating */
 .hero .float div button {
 	display: inline-block;
     width: 10px;
@@ -90,10 +89,12 @@
     border: 2px solid #fff !important;
 }
 
+/* Active Style Stlider Button */
 .hero .float div button.active {
     background-color: #fff !important;
 }
 
+/* Slider Column */
 .hero .col-md-12 {
     width: 100%;
     display: block;
@@ -101,27 +102,32 @@
     padding-right: 0;
 }
 
+/* Home Page Slider Image*/
 .hero .img img {
 	width: 100%;
 	height: auto;
 	min-height: 420px;
 }
 
+/* Slider Buttons*/
 .buttons button:focus {
     outline: 0;
 }
 
+/* Hidden Classes*/
 .mobile,
 img.not,
 .h {
     display: none !important;
 }
 
+/* Rendered Classes*/
 .col-md-12 .active,
 .s {
     display: block !important;
 }
 
+/* Responsive Code */
 @media screen and (max-width: 1280px) {
 
     /* Hide Desktop Slider Mini Box */
@@ -134,6 +140,8 @@ img.not,
         display: block !important;
         padding-bottom: 290px;
     }
+
+    /* Displays Hidden Navy Responsive Row */
     .col-md-12.mobile .float {
         display: block !important;
     }
@@ -166,17 +174,33 @@ img.not,
 }
 
 @media screen and (max-width: 960px) {
+
+    /* Responsive Image */
     .hero .img img {
         min-height: 275px;
     }
 }
 
+/* Tablet Styling */
 @media screen and (max-width: 768px) {
+    
+    /* Remove Static */
     .hero .img img {
-        min-height: 275px;
+        min-height: unset;
     }
+
+    /* Adjust Font size and spacing */
     .hero .float p {
         padding-top: 50px;
         font-size: 42px;
+    }
+}
+
+/* Mobile Styling */
+@media screen and (max-width: 400px) {
+    
+    /* Hero Slider Font size on Mobile */
+    .hero .float p {
+        font-size: 40px;
     }
 }

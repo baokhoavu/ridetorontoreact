@@ -1,11 +1,15 @@
+/* Footer */
 .footer {
     background: #00416b;
+    font-size: 14px;
+    line-height: 1.66;
 }
 
+/* Footer Container */
 .footer .container-fluid {
 	padding-left: 0 !important;
 	padding-right: 0 !important;
-	padding: 40px 0;
+	padding: 30px 0 60px;
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -13,70 +17,81 @@
     margin: 0 auto;
 }
 
+/* Div's within container using Bootstrap Column */
 .footer .container-fluid > div {
 	display: inline-block;
 }
 
+/* Link Hover */
 a.heavy:hover {
 	cursor: pointer;
 	text-decoration: underline !important;
 	color: #0075c9 !important;
 }
 
+/* Non-Link Hovers */
 .heavy a:hover {
 	cursor: pointer;
 }
 
+
 .footer .container-fluid > div.first {
 	padding-left: 0;
-	padding-right: 80px;
+	/*padding-right: 90px;*/
+	max-width: 21% !important;
 }
 
 .footer .container-fluid > div.first p {
 	margin-top: 15px;
 }
 
+/* PMCC Logo */
 .footer .container-fluid > div > a img.logo {
-	width: 100%;
+	width: 230px;
 	margin-bottom: 25px;
 }
 
+/* Title Partner */
+.footer .container-fluid > div .img {
+	width: 230px;
+}
+
+.footer .container-fluid .col-md-2 p {
+	margin-bottom: 35px;
+}
+
+/* Gold Footer Font */
 .footer .container-fluid > div > p:nth-of-type(1) {
 	color: #ffcd00 !important;
 }
 
+/* Everything else is White */
 .footer .container-fluid > div > p:nth-of-type(2),
-.footer .container-fluid > div > p:nth-of-type(3) {
-	color: #fff !important;
-}
-
-/*.footer .container-fluid > div > p,*/
-/*.footer .container-fluid > div.first p,*/
+.footer .container-fluid > div > p:nth-of-type(3),
 .footer .container-fluid div:nth-last-child(1),
-.footer .container-fluid > div > p span a {	
+.footer .container-fluid > div > p span a {
 	color: #fff !important;
 }
 
-.footer .container-fluid > div > p {
-	padding-bottom: 20px;
-}
-
+/* Each section for social icons */
 .footer .socials {
-	/*margin: 0 5px 8px;*/
 	max-width: 250px;
 	margin: 0 auto;
 }
 
+/* Social Rows block */
 .footer .socials > .row {
 	display: block;
 	width: 100%;
 }
 
+/* Social Second Row Footer */
 .footer .socials > .row:nth-child(2) {
     margin-bottom: 25px;
     margin-top: 30px;
 }
 
+/* Social Icons individual */
 .footer .socials a.foot {
 	background: #fff;
     padding: 12px;
@@ -84,10 +99,12 @@ a.heavy:hover {
     margin: 0 5px;
 }
 
+/* Social Color Hover Responsive */
 .footer .socials a.foot:hover {
 	background: #ffce00;
 }
 
+/* Social Icons image */
 .footer .socials a.foot img {
 	display: inline-block;
 	width: 100%;

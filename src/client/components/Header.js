@@ -2,8 +2,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Home from '../pages/Home';
+import About from '../pages/About';
 
-// import About from '../pages/About';
 // import Megamenu from './Megamenu';
 // import { connect } from 'react-redux';
 
@@ -172,6 +172,7 @@ export default class Header extends Component {
 				mg: false
 			})
 
+		// About
 		} else if ( eachClass.indexOf('abo') > -1 ) {
 			
 			// Opposite
@@ -188,6 +189,7 @@ export default class Header extends Component {
 				mf: false
 			})
 
+		// Get
 		} else if ( eachClass.indexOf('get') > -1 ) {
 			
 			// Opposite
@@ -203,6 +205,7 @@ export default class Header extends Component {
 				mn: false
 			})
 
+		// Ride
 		} else if ( eachClass.indexOf('rid') > -1 ) {
 
 			// Opposite
@@ -215,6 +218,7 @@ export default class Header extends Component {
 				mn: false
 			})
 
+		// Partners
 		} else if ( eachClass.indexOf('par') > -1 ) {
 			
 			// Opposite
@@ -227,6 +231,7 @@ export default class Header extends Component {
 				mn: false
 			})
 
+		// News
 		} else if ( eachClass.indexOf('new') > -1 ) {
 			
 			// Opposite
@@ -239,6 +244,7 @@ export default class Header extends Component {
 				mn: !not
 			})
 
+		// Riders
 		} else if ( eachClass.indexOf('rds') > -1 ) {
 			
 			// Opposite
@@ -252,6 +258,7 @@ export default class Header extends Component {
 				mf: false
 			})
 
+		// Teams
 		} else if ( eachClass.indexOf('tea') > -1 ) {
 
 			// Opposite
@@ -265,6 +272,7 @@ export default class Header extends Component {
 				mf: false
 			})
 
+		// Crew
 		} else if ( eachClass.indexOf('cre') > -1 ) {
 			
 			// Opposite
@@ -278,6 +286,7 @@ export default class Header extends Component {
 				mf: false
 			})
 
+		// Fundraising
 		} else if ( eachClass.indexOf('fun') > -1 ) {
 			
 			// Opposite
@@ -594,7 +603,11 @@ export default class Header extends Component {
 										</div>
 
 									</div>
+
+									{/* Toggle Partners Sub Plus Menu */}
 									<div className={"par" + " " + (this.state.mp ? "open" : null)} onClick={this.toggleSubMenu}>
+
+										{/* Partners WP Link */}
 										<a href="https://ride.conquercancer.ca/toronto20/about/partners/">Partners</a>
 
 										{/* Responsive Animated Arrow */}
@@ -632,13 +645,32 @@ export default class Header extends Component {
 										</div>
 
 									</div>
-									<div>
-										<a href="#">News</a>
+
+									{/* Toggles News Sub Plus Menu */}
+									<div className={"new" + " " + (this.state.mn ? "open" : null)} onClick={this.toggleSubMenu}>
+										
+										{/* News WP Link */}
+										<a href="https://ride.conquercancer.ca/toronto20/about/media">News</a>
 
 										{/* Responsive Animated Arrow */}
 										<div className={"new responsive-arrow" + " " + (this.state.mn ? "open" : null)} onClick={this.toggleSubMenu}>
 											›
 										</div>
+
+										<div className={'new sub plus col-md-12' + ' ' + (this.state.mn ? 'o' : 'c')}>
+
+											{/* Photos Link */}
+											<div>
+												<a href="http://www.pmcfphotos.ca/therideto">Photos</a>
+											</div>
+
+											{/* Videos WP Link */}
+											<div>
+												<a href="https://ride.conquercancer.ca/toronto20/videos/">Videos</a>
+											</div>
+
+										</div>
+
 
 									</div>
 								</div>
@@ -656,45 +688,160 @@ export default class Header extends Component {
 								<div className={"get responsive-arrow" + " " + (this.state.mg ? "open" : null)} onClick={this.toggleSubMenu}>
 									›
 								</div>
+
 								<div className={'get sub col-md-12' + ' ' + (this.state.mg ? 'o' : 'c')}>
-									<div>
-										<a href="#">Riders</a>
+								
+									{/* Toggles Riders Sub Plus Menu */}
+									<div className={"rds" + " " + (this.state.mrs ? "open" : null)} onClick={this.toggleSubMenu}>
+										
+										<a class="strong">Riders</a>
 
 										{/* Responsive Animated Arrow */}
 										<div className={"rds responsive-arrow" + " " + (this.state.mrs ? "open" : null)} onClick={this.toggleSubMenu}>
 											›
 										</div>
+
+										{/* Riders Sub Plus Menu */}
+										<div className={'rds sub plus col-md-12' + ' ' + (this.state.mrs ? 'o' : 'c')}>
+
+											{/* Top Fundraisers Leaderboard LO Link */}
+											<div>
+												<a href="https://secure.conquercancer.ca/site/SPageNavigator/to20_top_fundraisers">Top Fundraisers</a>
+											</div>
+
+											{/* Ambassador Leaderboard LO Link */}
+											<div>
+												<a href="https://secure.conquercancer.ca/site/SPageNavigator/to20_ambassador">Ambassadors</a>
+											</div>
+
+											{/* Polka Dot Jersey Leaderboard WP Link */}
+											<div>
+												<a href="https://ride.conquercancer.ca/toronto20/get-involved/polka-dot-jersey/">Polka Dot Jerseys</a>
+											</div>
+
+											{/* 5 and 10 Year Riders Leaderboard WP Link */}
+											<div>
+												<a href="https://ride.conquercancer.ca/toronto20/get-involved/gold-platinum-helmets/">5 and 10 Year Riders</a>
+											</div>
+
+											{/* Internal WP Link */}
+											<div>
+												<a href="https://ride.conquercancer.ca/toronto20/get-involved/rider-stories/">Riders' Stories</a>
+											</div>
+
+										</div>
+
 									</div>
-									<div>
-										<a href="#">Teams</a>
+
+									{/* Toggles Teams Sub Plus Menu */}
+									<div className={"tea" + " " + (this.state.mt ? "open" : null)} onClick={this.toggleSubMenu}>
+										
+										<a class="strong">Teams</a>
 
 										{/* Responsive Animated Arrow */}
 										<div className={"tea responsive-arrow" + " " + (this.state.mt ? "open" : null)} onClick={this.toggleSubMenu}>
 											›
 										</div>
+
+										{/* Riders Sub Plus Menu */}
+										<div className={'tea sub plus col-md-12' + ' ' + (this.state.mt ? 'o' : 'c')}>
+
+											{/* Top Teams Leaderboard LO Link */}
+											<div>
+												<a href="https://secure.conquercancer.ca/site/SPageNavigator/to20_top_teams">Top Teams</a>
+											</div>
+
+											{/* Internal WP Link */}
+											<div>
+												<a href="https://ride.conquercancer.ca/toronto20/get-involved/ride-as-a-team/">Ride As A Team</a>
+											</div>
+
+											{/* Industry Leaderboard LO Link */}
+											<div>
+												<a href="https://secure.conquercancer.ca/site/SPageNavigator/to20_industry_challenge">Industry Challenge</a>
+											</div>
+
+											{/* Community Leaderboard LO Link */}
+											<div>
+												<a href="https://secure.conquercancer.ca/site/SPageNavigator/to20_community_challenge">Community Challenge</a>
+											</div>
+
+											{/* Internal WP Link */}
+											<div>
+												<a href="https://ride.conquercancer.ca/toronto20/team-up-challenge/">Team Up Challenge</a>
+											</div>
+
+										</div>
+
 									</div>
-									<div>
+
+									{/* Toggles Crews and Volunteers Sub Plus Menu */}
+									<div className={"cre" + " " + (this.state.mc ? "open" : null)} onClick={this.toggleSubMenu}>
 										<a href="#">Crew and Volunteers</a>
 
 										{/* Responsive Animated Arrow */}
 										<div className={"cre responsive-arrow" + " " + (this.state.mc ? "open" : null)} onClick={this.toggleSubMenu}>
 											›
 										</div>
+
+										{/* Crews and Volunteers Sub Plus Menu */}
+										<div className={'cre sub plus col-md-12' + ' ' + (this.state.mc ? 'o' : 'c')}>
+
+											{/* Internal WP Link */}
+											<div>
+												<a href="https://ride.conquercancer.ca/toronto20/get-involved/crew-and-volunteer/">How You Can Help</a>
+											</div>
+
+											{/* Internal WP Link */}
+											<div>
+												<a href="https://ride.conquercancer.ca/toronto20/get-involved/important-info/">Important Info</a>
+											</div>
+
+											{/* Internal WP Link */}
+											<div>
+												<a href="https://ride.conquercancer.ca/toronto20/get-involved/crew-and-volunteer/join-as-a-group/">Join As A Group</a>
+											</div>
+
+											{/* Internal WP Link */}
+											<div>
+												<a href="https://ride.conquercancer.ca/toronto20/get-involved/crew-and-volunteer/our-support/">Our Support</a>
+											</div>
+
+										</div>
+
 									</div>
-									<div>
+
+									{/* Toggles Fundraising Sub Plus Menu */}
+									<div className={"fun" + " " + (this.state.mf ? "open" : null)} onClick={this.toggleSubMenu}>
 										<a href="#">Fundraising</a>
 
 										{/* Responsive Animated Arrow */}
 										<div className={"fun responsive-arrow" + " " + (this.state.mf ? "open" : null)} onClick={this.toggleSubMenu}>
 											›
 										</div>
+
+										{/* Fundraising Sub Plus Menu */}
+										<div className={'fun sub plus col-md-12' + ' ' + (this.state.mf ? 'o' : 'c')}>
+
+											{/* Internal WP Link */}
+											<div>
+												<a href="https://ride.conquercancer.ca/toronto20/get-involved/fundraising/">Toolkit</a>
+											</div>
+
+											{/* Internal WP Link */}
+											<div>
+												<a href="https://ride.conquercancer.ca/toronto20/fundraising/refer-and-raise/">Refer and Raiser</a>
+											</div>
+
+										</div>
+
 									</div>
 								</div>
 							</div>
 
 							{/* Get Info */}
 							<div>
-								<a href="#">
+								<a href="https://secure.conquercancer.ca/site/SPageNavigator/to20_get_info">
 									Get Info
 								</a>
 							</div>
@@ -703,6 +850,7 @@ export default class Header extends Component {
 					{/*<Route exact path="/devReactBao/" component={Home} />*/}
 					
 					<Route exact path="/" component={Home} />
+					<Route exact path="/about" component={About} />
 				</Router>
 			</div>
 		)

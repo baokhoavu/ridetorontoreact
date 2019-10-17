@@ -56,3 +56,13 @@
 .promo .responsive span a:hover {
     color: #eff;
 }
+
+@media screen and (max-width: 500px) {
+    .promo .buttons > a {
+        margin: 2.5px 2% 0;
+        width: 46%;
+    }
+    .promo .responsive span {
+        font-size: 3.25vw;
+    }
+}
