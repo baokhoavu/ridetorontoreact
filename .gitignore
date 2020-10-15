@@ -4,3 +4,12 @@ node_modules
 dist
 *.log
 yarn.lock
+
+.png
+.jpg
+.PNG
+.JPG
+*.png
+*.jpg
+*.PNG
+*.JPG

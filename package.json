@@ -1,5 +1,6 @@
 {
-  "name": "simple-react-full-stack",
+  "name": "ride-toronto-reactjs",
+  "homepage": "https://www.baokhoavu.com/ridetorontoreact",
   "version": "1.0.0",
   "description": "Boilerplate to build a full stack web application using React, Node.js, Express and Webpack.",
   "main": "src/server/index.js",
